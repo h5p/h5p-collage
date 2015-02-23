@@ -30,6 +30,9 @@ H5P.Collage = (function ($, EventDispatcher) {
      * @param {jQuery} $container
      */
     this.attach = function ($container) {
+      // Set template
+      var template = new Collage.Template($wrapper, content.template, content.clips, contentId, content.options.spacing, self);
+
       $container.addClass('h5p-collage').html('').append($wrapper);
     };
 
@@ -43,11 +46,8 @@ H5P.Collage = (function ($, EventDispatcher) {
         height: (content.options.heightRatio * width) + 'px'
       });
 
-      template.fit();
+      //template.fit();
     });
-
-    // Init template
-    var template = new Collage.Template($wrapper, content.template, content.clips, contentId, content.options.spacing);
   }
 
   // Extends the event dispatcher

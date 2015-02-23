@@ -12,6 +12,7 @@
   overflow: hidden;
   border: 0 solid transparent;
   box-sizing: border-box;
+  position: relative;
 }
 .h5p-collage img {
   width: auto;

@@ -14,7 +14,7 @@
    * @param {Number} contentId
    * @param {Number} spacing
    */
-  Collage.Template = function ($container, type, clips, contentId, spacing) {
+  Collage.Template = function ($container, type, clips, contentId, spacing, collage) {
     var self = this;
 
     // Create template wrapper
@@ -61,8 +61,11 @@
         });
 
         // Add clip to column
-        clipInstances.push(new Collage.Clip($col, clips[currentClipIndex], contentId));
+        var clip = new Collage.Clip($col, clips[currentClipIndex], contentId);
+        clipInstances.push(clip);
         currentClipIndex++;
+
+        collage.trigger('clipAdded', clip);
       }
     };
 
