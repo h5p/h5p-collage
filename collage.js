@@ -9,16 +9,19 @@ H5P.Collage = (function ($, EventDispatcher) {
    * @class
    * @namespace H5P
    * @param {Object} parameters
-   * @param {Number} id
+   * @param {Number} contentId
    */
-  function Collage(parameters, id) {
+  function Collage(parameters, contentId) {
+    var self = this;
+
     // Initialize event inheritance
     EventDispatcher.call(self);
 
+    // Content shorthand
+    var content = parameters.collage;
+
     // Create collage wrapper
-    var $wrapper = $('<div/>', {
-      text: 'Hello Collage!'
-    });
+    var $wrapper = $('<div/>');
 
     /**
      * Attach the collage to the given container.
@@ -31,25 +34,20 @@ H5P.Collage = (function ($, EventDispatcher) {
     };
 
     /**
-     * @public
+     * Handle resize events
      */
-    this.resize = function () {
-      // var width = $collage.width();
-      // $collage.css({
-      //   fontSize: ((width / 900) * 16) + 'px',
-      //   height: (parameters.collage.heightRatio * width) + 'px'
-      // });
-    };
+    self.on('resize', function () {
+      var width = $wrapper.width();
+      $wrapper.css({
+        fontSize: ((width / 480) * 16) + 'px',
+        height: (content.options.heightRatio * width) + 'px'
+      });
 
-    /**
-     * @private
-     */
-    var init = function () {
-      console.log(parameters);
+      template.fit();
+    });
 
-    };
-
-    init();
+    // Init template
+    var template = new Collage.Template($wrapper, content.template, content.clips, contentId, content.options.spacing);
   }
 
   // Extends the event dispatcher
