@@ -61,6 +61,9 @@
         });
 
         // Add clip to column
+        if (!clips[currentClipIndex]) {
+          clips[currentClipIndex] = {}; // Add default
+        }
         var clip = new Collage.Clip($col, clips[currentClipIndex], contentId);
         clipInstances.push(clip);
         currentClipIndex++;
