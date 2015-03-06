@@ -8,6 +8,8 @@
   /**
    * Collage Clip
    *
+   * TODO: Allow rotating images?
+   *
    * @class
    * @namespace H5P.Collage
    * @param {jQuery} $container
@@ -21,7 +23,7 @@
     EventDispatcher.call(self);
 
     // Shared clip resources
-    var $empty, $img, prop;
+    var $empty, $img, prop, edit;
 
     /**
      * @private
@@ -35,7 +37,7 @@
 
       // Create new image element
       $img = $('<img/>', {
-        'class': 'h5p-collage-image',
+        'class': 'h5p-collage-image' + (edit ? ' h5p-collage-edit' : ''),
         alt: 'TODO',
         appendTo: $container,
         on: {
@@ -44,8 +46,9 @@
             $img.css({
               width: 'auto',
               height: 'auto',
-              margin: 0
-            });
+              margin: 0,
+              visibility: 'visible'
+            }).attr('tabindex', edit ? '1' : '');
 
             // Remove loading
             $empty.removeClass('h5p-collage-loading').detach();
@@ -69,7 +72,7 @@
         }
       });
 
-      if (content.type && content.type.params) {
+      if (content.image) {
         self.loading();
         loadImage();
       }
@@ -79,7 +82,7 @@
      * @private
      */
     var loadImage = function () {
-      $img.attr('src', H5P.getPath(content.type.params.file.path, contentId));
+      $img.attr('src', H5P.getPath(content.image.path, contentId));
     };
 
     /**
@@ -95,13 +98,7 @@
      * @public
      */
     self.update = function (newContent) {
-      if (!content.type || !content.type.params) {
-        content.type = { // TODO: Update after semantics change
-          library: 'H5P.Image 1.0',
-          params: {}
-        };
-      }
-      content.type.params.file = newContent;
+      content.image = newContent;
       content.scale = 1;
       content.offset = {
         top: 0,
@@ -119,7 +116,7 @@
         width: '',
         height: '',
         margin: ''
-      });
+      }).attr('tabindex', '');
 
       $empty.addClass('h5p-collage-loading').prependTo($container);
     };
@@ -138,6 +135,8 @@
      * TODO: Touch support
      */
     self.enableRepositioning = function () {
+      edit = true;
+
       /**
        * A helpers that makes it easier to keep track of size.
        *
@@ -216,23 +215,35 @@
         };
       })();
 
-      // Mousewheel zoom enabled while holding Shift
+      // Mousewheel zoom enabled while holding the Z key
       var zooming = false;
       H5P.$body.on('keydown', function (event) {
-        if (event.keyCode === 16) {
+        if (event.keyCode === 90) {
           zooming = true;
+        }
+        else if ((event.keyCode === 107 || event.keyCode === 171) && $img.is(':focus')) {
+          zoom(0.1);
+        }
+        else if ((event.keyCode === 109 || event.keyCode === 173) && $img.is(':focus')) {
+          zoom(-0.1);
         }
       });
       H5P.$body.on('keyup', function (event) {
-        if (event.keyCode === 16) {
+        if (event.keyCode === 90) {
           zooming = false;
         }
       });
-      $img.on('mousewheel', function (event) {
+      $img.on('mousewheel DOMMouseScroll', function (event) {
+        $img.focus();
         if (zooming) {
-          zoom(event.originalEvent.wheelDelta > 0 ? 0.1 : -0.1);
-          event.preventDefault();
-          return false;
+          if (event.originalEvent.wheelDelta) {
+            zoom(event.originalEvent.wheelDelta > 0 ? 0.1 : -0.1);
+            return false;
+          }
+          else if (event.originalEvent.detail) {
+            zoom(event.originalEvent.detail > 0 ? -0.1 : 0.1);
+            return false;
+          }
         }
       });
 
@@ -285,11 +296,12 @@
         H5P.$body
           .bind('mouseup', release)
           .bind('mouseleave', release)
-          .bind('mousemove', move);
+          .bind('mousemove', move)
+          .addClass('h5p-no-select');
 
-        $img.css('cursor', '-webkit-grabbing');
+        $img.addClass('h5p-collage-grabbed').focus();
 
-        // TODO: Disabled all select
+        return false;
       });
 
       /**
@@ -315,11 +327,14 @@
         H5P.$body
           .unbind('mouseup', release)
           .unbind('mouseleave', release)
-          .unbind('mousemove', move);
+          .unbind('mousemove', move)
+          .removeClass('h5p-no-select');
 
-        $img.css('cursor', '');
+        $img.removeClass('h5p-collage-grabbed');
 
-        content.offset = lastOffset.getPs();
+        if (lastOffset) {
+          content.offset = lastOffset.getPs();
+        }
       };
     };
 

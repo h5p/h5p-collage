@@ -62,13 +62,9 @@
           "type": "group",
           "fields": [
             {
-              "name": "type",
-              "label": "Type",
-              "type": "library",
-              "options": [
-                "H5P.Image 1.0",
-                "H5P.Text 1.0"
-              ]
+              "name": "image",
+              "type": "image",
+              "label": "Image"
             },
             {
               "name": "offset",
