@@ -86,15 +86,6 @@
     };
 
     /**
-     * Not used.
-     *
-     * @public
-     */
-    self.fit = function () {
-
-    };
-
-    /**
      * @public
      */
     self.update = function (newContent) {

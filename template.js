@@ -1,7 +1,7 @@
 /**
  * Extends H5P.Collage with a Template class.
  */
-(function (Collage, $) {
+(function ($, EventDispatcher, Collage) {
 
   /**
    * Collage Template
@@ -14,31 +14,22 @@
    * @param {Number} contentId
    * @param {Number} spacing
    */
-  Collage.Template = function ($container, type, clips, contentId, spacing, collage) {
+  Collage.Template = function ($container, spacing, layout) {
     var self = this;
+
+    // Initialize event inheritance
+    EventDispatcher.call(self);
 
     // Create template wrapper
     var $wrapper = $('<div/>', {
       'class': 'h5p-collage-template'
     });
 
-    // Keep track of collage clips
-    var currentClipIndex = 0;
-    var clipInstances = [];
-
     // Half the spacing
     spacing /= 2;
 
-    /**
-     * Not used.
-     *
-     * @public
-     */
-    self.fit = function () {
-      for (var i = 0; i < clipInstances.length; i++) {
-        clipInstances[i].fit();
-      }
-    };
+    // Keep track of our rows
+    var table = [];
 
     /**
      * Add columns to row.
@@ -48,6 +39,8 @@
      * @param {Number} num
      */
     var addCols = function ($row, num) {
+      var cols = [];
+
       for (var i = 0; i < num; i++) {
         // Add column to row
         var $col = $('<div/>', {
@@ -60,16 +53,11 @@
           appendTo: $row
         });
 
-        // Add clip to column
-        if (!clips[currentClipIndex]) {
-          clips[currentClipIndex] = {}; // Add default
-        }
-        var clip = new Collage.Clip($col, clips[currentClipIndex], contentId);
-        clipInstances.push(clip);
-        currentClipIndex++;
-
-        collage.trigger('clipAdded', clip);
+        self.trigger('columnAdded', $col);
+        cols.push($col);
       }
+
+      return cols;
     };
 
     /**
@@ -92,13 +80,55 @@
         });
 
         // Add row columns
-        addCols($row, Number(rows[i]));
+        table.push({
+          $row: $row,
+          cols: addCols($row, Number(rows[i]))
+        });
       }
     };
 
-    // Initialize
-    addRows(type.split('-'));
+    /**
+     * @public
+     */
+    self.setLayout = function (newLayout) {
+      $wrapper.html('');
+      addRows(newLayout.split('-'));
+    };
+
+    /**
+     * @public
+     */
+    self.setSpacing = function (newSpacing) {
+      spacing = newSpacing / 2;
+
+      // Update table styling
+      for (var i = 0; i < table.length; i++) {
+        var row = table[i];
+        row.$row.css({
+          borderTopWidth: (i === 0 ? 0 : spacing + 'em'),
+          borderBottomWidth: (i === table.length - 1 ? 0 : spacing + 'em')
+        });
+
+        for (var j = 0; j < row.cols.length; j++) {
+          row.cols[j].css({
+            borderLeftWidth: (j === 0 ? 0 : spacing + 'em'),
+            borderRightWidth: (j === row.cols.length - 1 ? 0 : spacing + 'em')
+          });
+        }
+      }
+    };
+
+    // Initialize right away if we have a layout
+    if (layout) {
+      self.setLayout(layout);
+    }
+
+    // Insert our wrapper into the given container
     $wrapper.appendTo($container);
   };
 
-})(H5P.Collage, H5P.jQuery);
+  // Extends the event dispatcher
+  Collage.Template.prototype = Object.create(EventDispatcher.prototype);
+  Collage.Template.prototype.constructor = Collage.Template;
+
+})(H5P.jQuery, H5P.EventDispatcher, H5P.Collage);
