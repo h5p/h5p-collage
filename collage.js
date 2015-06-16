@@ -1,15 +1,12 @@
-/**
- * Defines the H5P.Collage class
- */
 H5P.Collage = (function ($, EventDispatcher) {
 
   /**
    * Create a new collage.
    *
-   * @class
-   * @namespace H5P
+   * @class H5P.Collage
+   * @extends H5P.EventDispatcher
    * @param {Object} parameters
-   * @param {Number} contentId
+   * @param {number} contentId
    */
   function Collage(parameters, contentId) {
     var self = this;
@@ -21,9 +18,14 @@ H5P.Collage = (function ($, EventDispatcher) {
     var content = parameters.collage;
 
     // Create collage wrapper
-    var $wrapper = $('<div/>');
-
-    // TODO: Print error if parameters are missing
+    var wrapperOptions = {
+      'class': 'h5p-collage-wrapper',
+      css: {}
+    };
+    if (content.options.frame) {
+      wrapperOptions.css.borderWidth = content.options.spacing + 'em';
+    }
+    var $wrapper = $('<div/>', wrapperOptions);
 
     // Create new template for adding clips to
     var template = new Collage.Template($wrapper, content.options.spacing);
@@ -49,10 +51,20 @@ H5P.Collage = (function ($, EventDispatcher) {
     });
 
     /**
+     * Make sure all the clips cover their containers.
+     *
+     * @private
+     */
+    var fitClips = function () {
+      for (var i = 0; i < clipInstances.length; i++) {
+        clipInstances[i].fit();
+      }
+    };
+
+    /**
      * Attach the collage to the given container.
      *
-     * @public
-     * @param {jQuery} $container
+     * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
       // Render template
@@ -63,7 +75,9 @@ H5P.Collage = (function ($, EventDispatcher) {
     };
 
     /**
-     * @public
+     * Set a new collage layout.
+     *
+     * @param {string} newLayout
      */
     self.setLayout = function (newLayout) {
       clipInstances = [];
@@ -71,10 +85,34 @@ H5P.Collage = (function ($, EventDispatcher) {
     };
 
     /**
-     * @public
+     * Set the spacing between the collage clips.
+     *
+     * @param {number} newSpacing
      */
     self.setSpacing = function (newSpacing) {
       template.setSpacing(newSpacing);
+      fitClips();
+    };
+
+    /**
+     * Set the frame around the collage.
+     *
+     * @param {number} newFrameWidth
+     */
+    self.setFrame = function (newFrameWidth) {
+      $wrapper.css('borderWidth', newFrameWidth + 'em');
+      fitClips();
+    };
+
+    /**
+     * Set the height / aspect ratio of the collage.
+     *
+     * @param {number} newHeight
+     */
+    self.setHeight = function (newHeight) {
+      // Update template
+      $wrapper.css('height', ($wrapper.width() * newHeight) + 'px');
+      fitClips();
     };
 
     /**

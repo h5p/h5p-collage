@@ -1,20 +1,13 @@
-/**
- * Extends H5P.Collage with a Clip class.
- *
- * TODO: Make sure we support all browsers: cursor, animations
- */
-(function (Collage, $, EventDispatcher) {
+(function ($, Collage, EventDispatcher) {
 
   /**
    * Collage Clip
    *
-   * TODO: Allow rotating images?
-   *
-   * @class
-   * @namespace H5P.Collage
-   * @param {jQuery} $container
+   * @class H5P.Collage.Clip
+   * @extends H5P.EventDispatcher
+   * @param {H5P.jQuery} $container
    * @param {Object} content
-   * @param {Number} contentId
+   * @param {number} contentId
    */
   Collage.Clip = function ($container, content, contentId) {
     var self = this;
@@ -26,6 +19,9 @@
     var $empty, $img, prop, edit;
 
     /**
+     * Initialize the clip content.
+     * Loads the image and sizes it correctly.
+     *
      * @private
      */
     var init = function () {
@@ -72,13 +68,15 @@
         }
       });
 
-      if (content.image) {
+      if (!self.empty()) {
         self.loading();
         loadImage();
       }
     };
 
     /**
+     * Triggers the loading of the image.
+     *
      * @private
      */
     var loadImage = function () {
@@ -86,7 +84,18 @@
     };
 
     /**
-     * @public
+     * Check if the current clip is empty or set.
+     *
+     * @returns {boolean}
+     */
+    self.empty = function () {
+      return !content.image;
+    };
+
+    /**
+     * Update the clip with new content.
+     *
+     * @param {Object} newContent
      */
     self.update = function (newContent) {
       content.image = newContent;
@@ -99,7 +108,7 @@
     };
 
     /**
-     * @public
+     * Hide image and display loading screen.
      */
     self.loading = function () {
       // Hide image
@@ -113,17 +122,16 @@
     };
 
     /**
-     * @public
+     * Append clip to given container.
+     *
+     * @param {H5P.jQuery} $element
      */
     self.append = function ($element) {
       $container.append($element);
     };
 
     /**
-     * @public
-     *
-     * TODO: Keyboard support
-     * TODO: Touch support
+     * Enables panning and zooming on clip.
      */
     self.enableRepositioning = function () {
       edit = true;
@@ -139,6 +147,16 @@
       function Size(x, y) {
         this.x = x;
         this.y = y;
+
+        /**
+         * Letter than
+         *
+         * @param {Size} size
+         * @returns {boolean}
+         */
+        this.lt = function (size) {
+          return this.x < size.x || this.y < size.y;
+        };
       }
 
       /**
@@ -195,16 +213,15 @@
         return Number(px.replace('px', ''));
       }
 
-      // Keep track of container size (not loaded until used)
-      var getViewPort = (function () {
-        var viewPort;
-        return function () {
-          if (!viewPort) {
-            viewPort = new Size($container.width(), $container.height());
-          }
-          return viewPort;
-        };
-      })();
+      /**
+       * Keep track of container size
+       *
+       * @private
+       * @returns {Size}
+       */
+      function getViewPort() {
+        return new Size($container.width(), $container.height());
+      }
 
       // Mousewheel zoom enabled while holding the Z key
       var zooming = false;
@@ -239,7 +256,10 @@
       });
 
       /**
+       * Zoom in / out on the clip.
+       *
        * @private
+       * @param {number} delta
        */
       var zoom = function (delta) {
         // Increase / decrease scale
@@ -299,6 +319,7 @@
        * Move image
        *
        * @private
+       * @param {Event} event
        */
       var move = function (event) {
         lastOffset = new Offset(
@@ -327,6 +348,40 @@
           content.offset = lastOffset.getPs();
         }
       };
+
+      /**
+       * Makes sure the image covers the whole container.
+       * Useful when changing the aspect ratio of the container.
+       */
+      self.fit = function () {
+        var imageSize = {
+          width: 'auto',
+          height: 'auto',
+          margin: content.offset.top + '% 0 0 ' + content.offset.left + '%'
+        };
+
+        // Reset size
+        $img.css(imageSize);
+
+        var containerSize = new Size($container.width(), $container.height());
+
+        // Find ratios
+        var imageRatio = ($img.width() / $img.height());
+        var containerRatio = (containerSize.x / containerSize.y);
+
+        // Set new size
+        imageSize[imageRatio > containerRatio ? 'height' : 'width'] = (content.scale * 100) + '%';
+        $img.css(imageSize);
+
+        // Make sure image covers container
+        var offset = new Offset(
+          new Size(pxToNum($img.css('marginLeft')), pxToNum($img.css('marginTop'))),
+          new Size(0, 0),
+          new Size($img.width() - containerSize.x, $img.height() - containerSize.y)
+        );
+        $img.css(offset.getPx());
+        content.offset = offset.getPs();
+      };
     };
 
     init();
@@ -337,4 +392,4 @@
   Collage.Clip.prototype = Object.create(EventDispatcher.prototype);
   Collage.Clip.prototype.constructor = Collage.Clip;
 
-})(H5P.Collage, H5P.jQuery, H5P.EventDispatcher);
+})(H5P.jQuery, H5P.Collage, H5P.EventDispatcher);

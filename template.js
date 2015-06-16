@@ -1,18 +1,15 @@
-/**
- * Extends H5P.Collage with a Template class.
- */
 (function ($, EventDispatcher, Collage) {
 
   /**
    * Collage Template
    *
-   * @class
-   * @namespace H5P.Collage
-   * @param {jQuery} $container
-   * @param {String} type
+   * @class H5P.Collage.Template
+   * @extends H5P.EventDispatcher
+   * @param {H5P.jQuery} $container
+   * @param {string} type
    * @param {Array} clips
-   * @param {Number} contentId
-   * @param {Number} spacing
+   * @param {number} contentId
+   * @param {number} spacing
    */
   Collage.Template = function ($container, spacing, layout) {
     var self = this;
@@ -35,8 +32,8 @@
      * Add columns to row.
      *
      * @private
-     * @param {jQuery} $row
-     * @param {Number} num
+     * @param {H5P.jQuery} $row
+     * @param {number} num
      */
     var addCols = function ($row, num) {
       var cols = [];
@@ -88,7 +85,9 @@
     };
 
     /**
-     * @public
+     * Set a new layout for the template.
+     *
+     * @param {string} newLayout
      */
     self.setLayout = function (newLayout) {
       $wrapper.html('');
@@ -96,7 +95,9 @@
     };
 
     /**
-     * @public
+     * Set the spacing between the clips.
+     *
+     * @param {number} newSpacing
      */
     self.setSpacing = function (newSpacing) {
       spacing = newSpacing / 2;
