@@ -14,7 +14,18 @@ H5P.Collage = (function ($, EventDispatcher) {
     // Initialize event inheritance
     EventDispatcher.call(self);
 
-    // Content shorthand
+    // Content defaults
+    setDefaults(parameters, {
+      collage: {
+        template: '2-1',
+        options: {
+          heightRatio: 0.75,
+          spacing: 0.5,
+          frame: true
+        },
+        clips: []
+      }
+    });
     var content = parameters.collage;
     var $wrapper;
 
@@ -149,6 +160,26 @@ H5P.Collage = (function ($, EventDispatcher) {
   // Extends the event dispatcher
   Collage.prototype = Object.create(EventDispatcher.prototype);
   Collage.prototype.constructor = Collage;
+
+  /**
+   * Simple recusive function the helps set default values without
+   * destroying object references.
+   *
+   * @param {object} params values
+   * @param {object} values default values
+   */
+  var setDefaults = function (params, values) {
+    for (var prop in values) {
+      if (values.hasOwnProperty(prop)) {
+        if (params[prop] === undefined) {
+          params[prop] = values[prop];
+        }
+        else if (params[prop] instanceof Object && !(params[prop] instanceof Array)) {
+          setDefaults(params[prop], values[prop]);
+        }
+      }
+    }
+  };
 
   return Collage;
 })(H5P.jQuery, H5P.EventDispatcher);
