@@ -16,19 +16,10 @@ H5P.Collage = (function ($, EventDispatcher) {
 
     // Content shorthand
     var content = parameters.collage;
-
-    // Create collage wrapper
-    var wrapperOptions = {
-      'class': 'h5p-collage-wrapper',
-      css: {}
-    };
-    if (content.options.frame) {
-      wrapperOptions.css.borderWidth = content.options.spacing + 'em';
-    }
-    var $wrapper = $('<div/>', wrapperOptions);
+    var $wrapper;
 
     // Create new template for adding clips to
-    var template = new Collage.Template($wrapper, content.options.spacing);
+    var template = new Collage.Template(content.options.spacing);
 
     // Keep track of collage clips
     var clipInstances;
@@ -51,6 +42,29 @@ H5P.Collage = (function ($, EventDispatcher) {
     });
 
     /**
+     * Creates the HTML the first time the collage is attaced.
+     *
+     * @private
+     */
+    var createHtml = function () {
+      // Create collage wrapper
+      var wrapperOptions = {
+        'class': 'h5p-collage-wrapper',
+        css: {}
+      };
+      if (content.options.frame) {
+        wrapperOptions.css.borderWidth = content.options.spacing + 'em';
+      }
+      $wrapper = $('<div/>', wrapperOptions);
+
+      // Add template
+      template.appendTo($wrapper);
+
+      // Render template
+      self.setLayout(content.template);
+    };
+
+    /**
      * Make sure all the clips cover their containers.
      *
      * @private
@@ -67,8 +81,9 @@ H5P.Collage = (function ($, EventDispatcher) {
      * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
-      // Render template
-      self.setLayout(content.template);
+      if ($wrapper === undefined) {
+        createHtml();
+      }
 
       // Add to DOM
       $container.addClass('h5p-collage').html('').append($wrapper);
@@ -119,6 +134,10 @@ H5P.Collage = (function ($, EventDispatcher) {
      * Handle resize events
      */
     self.on('resize', function () {
+      if ($wrapper === undefined) {
+        return;
+      }
+
       var width = $wrapper.width();
       $wrapper.css({
         fontSize: ((width / 480) * 16) + 'px',

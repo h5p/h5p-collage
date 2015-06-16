@@ -5,22 +5,17 @@
    *
    * @class H5P.Collage.Template
    * @extends H5P.EventDispatcher
-   * @param {H5P.jQuery} $container
-   * @param {string} type
-   * @param {Array} clips
-   * @param {number} contentId
    * @param {number} spacing
+   * @param {string} layout
    */
-  Collage.Template = function ($container, spacing, layout) {
+  Collage.Template = function (spacing, layout) {
     var self = this;
 
     // Initialize event inheritance
     EventDispatcher.call(self);
 
     // Create template wrapper
-    var $wrapper = $('<div/>', {
-      'class': 'h5p-collage-template'
-    });
+    var $wrapper;
 
     // Half the spacing
     spacing /= 2;
@@ -85,6 +80,26 @@
     };
 
     /**
+     * Append template to given container.
+     *
+     * @param {H5P.jQuery} $container
+     */
+    self.appendTo = function ($container) {
+      // Create wrapper
+      $wrapper = $('<div/>', {
+        'class': 'h5p-collage-template'
+      });
+
+      // Initialize right away if we have a layout
+      if (layout) {
+        self.setLayout(layout);
+      }
+
+      // Insert our wrapper into the given container
+      $wrapper.appendTo($container);
+    };
+
+    /**
      * Set a new layout for the template.
      *
      * @param {string} newLayout
@@ -118,14 +133,6 @@
         }
       }
     };
-
-    // Initialize right away if we have a layout
-    if (layout) {
-      self.setLayout(layout);
-    }
-
-    // Insert our wrapper into the given container
-    $wrapper.appendTo($container);
   };
 
   // Extends the event dispatcher
