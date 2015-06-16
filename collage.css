@@ -24,13 +24,8 @@
   margin: 0 0 0 -1px;
   visibility: hidden;
 }
-.h5p-collage-edit {
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-.h5p-collage-grabbed {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
+.h5p-collage img:focus {
+  outline: none;
 }
 .h5p-collage-empty {
   background: #f6f6f6;

@@ -34,7 +34,7 @@
       // Create new image element
       $img = $('<img/>', {
         'class': 'h5p-collage-image' + (edit ? ' h5p-collage-edit' : ''),
-        alt: 'TODO',
+        alt: '',
         appendTo: $container,
         on: {
           load: function () {
@@ -44,7 +44,7 @@
               height: 'auto',
               margin: 0,
               visibility: 'visible'
-            }).attr('tabindex', edit ? '1' : '');
+            }).attr('tabindex', edit ? '0' : '');
 
             // Remove loading
             $empty.removeClass('h5p-collage-loading').detach();
@@ -98,13 +98,22 @@
      * @param {Object} newContent
      */
     self.update = function (newContent) {
-      content.image = newContent;
-      content.scale = 1;
-      content.offset = {
-        top: 0,
-        left: 0
-      };
-      loadImage();
+      if (newContent) {
+        content.image = newContent;
+        content.scale = 1;
+        content.offset = {
+          top: 0,
+          left: 0
+        };
+      }
+
+      if (self.empty()) {
+        // Remove loading
+        $empty.removeClass('h5p-collage-loading');
+      }
+      else {
+        loadImage();
+      }
     };
 
     /**
