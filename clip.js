@@ -235,13 +235,14 @@
       // Mousewheel zoom enabled while holding the Z key
       var zooming = false;
       H5P.$body.on('keydown', function (event) {
-        if (event.keyCode === 90) {
+        var keyCode = event.keyCode;
+        if (keyCode === 90) {
           zooming = true;
         }
-        else if ((event.keyCode === 107 || event.keyCode === 171) && $img.is(':focus')) {
+        else if ((keyCode === 107 || keyCode === 171 || keyCode === 187) && $img.is(':focus')) {
           zoom(0.1);
         }
-        else if ((event.keyCode === 109 || event.keyCode === 173) && $img.is(':focus')) {
+        else if ((keyCode === 109 || keyCode === 173 || keyCode === 189) && $img.is(':focus')) {
           zoom(-0.1);
         }
       });
