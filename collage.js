@@ -80,7 +80,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      *
      * @private
      */
-    var fitClips = function () {
+    var fitClips = function () {
       for (var i = 0; i < clipInstances.length; i++) {
         clipInstances[i].fit();
       }
@@ -144,7 +144,7 @@ H5P.Collage = (function ($, EventDispatcher) {
     /**
      * Handle resize events
      */
-    self.on('resize', function () {
+    self.on('resize', function () {
       if ($wrapper === undefined) {
         return;
       }

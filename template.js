@@ -30,7 +30,7 @@
      * @param {H5P.jQuery} $row
      * @param {number} num
      */
-    var addCols = function ($row, num) {
+    var addCols = function ($row, num) {
       var cols = [];
 
       for (var i = 0; i < num; i++) {
@@ -58,7 +58,7 @@
      * @private
      * @param {Array} rows
      */
-    var addRows = function (rows) {
+    var addRows = function (rows) {
       for (var i = 0; i < rows.length; i++) {
         // Add row to wrapper
         var $row = $('<div/>', {
@@ -84,7 +84,7 @@
      *
      * @param {H5P.jQuery} $container
      */
-    self.appendTo = function ($container) {
+    self.appendTo = function ($container) {
       // Create wrapper
       $wrapper = $('<div/>', {
         'class': 'h5p-collage-template'

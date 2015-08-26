@@ -79,14 +79,14 @@
      *
      * @private
      */
-    var loadImage = function () {
+    var loadImage = function () {
       $img.attr('src', H5P.getPath(content.image.path, contentId));
     };
 
     /**
      * Check if the current clip is empty or set.
      *
-     * @returns {boolean}
+     * @returns {boolean}
      */
     self.empty = function () {
       return !content.image;
@@ -119,7 +119,7 @@
     /**
      * Hide image and display loading screen.
      */
-    self.loading = function () {
+    self.loading = function () {
       // Hide image
       $img.css({
         width: '',
@@ -135,7 +135,7 @@
      *
      * @param {H5P.jQuery} $element
      */
-    self.append = function ($element) {
+    self.append = function ($element) {
       $container.append($element);
     };
 
@@ -153,7 +153,7 @@
        * @param {Number} x
        * @param {Number} y
        */
-      function Size(x, y) {
+      function Size(x, y) {
         this.x = x;
         this.y = y;
 
@@ -163,7 +163,7 @@
          * @param {Size} size
          * @returns {boolean}
          */
-        this.lt = function (size) {
+        this.lt = function (size) {
           return this.x < size.x || this.y < size.y;
         };
       }
@@ -195,14 +195,14 @@
           y = -max.y;
         }
 
-        this.getPx = function () {
+        this.getPx = function () {
           return {
             marginLeft: x + 'px',
             marginTop: y + 'px'
           };
         };
 
-        this.getPs = function () {
+        this.getPs = function () {
           var viewPort = getViewPort();
           var p = viewPort.x / 100;
           return {
@@ -228,13 +228,13 @@
        * @private
        * @returns {Size}
        */
-      function getViewPort() {
+      function getViewPort() {
         return new Size($container.width(), $container.height());
       }
 
       // Mousewheel zoom enabled while holding the Z key
       var zooming = false;
-      H5P.$body.on('keydown', function (event) {
+      H5P.$body.on('keydown', function (event) {
         var keyCode = event.keyCode;
         if (keyCode === 90) {
           zooming = true;
@@ -246,7 +246,7 @@
           zoom(-0.1);
         }
       });
-      H5P.$body.on('keyup', function (event) {
+      H5P.$body.on('keyup', function (event) {
         if (event.keyCode === 90) {
           zooming = false;
         }
@@ -363,7 +363,7 @@
        * Makes sure the image covers the whole container.
        * Useful when changing the aspect ratio of the container.
        */
-      self.fit = function () {
+      self.fit = function () {
         var imageSize = {
           width: 'auto',
           height: 'auto',
