@@ -67,7 +67,7 @@
             "name": "heightRatio",
             "label": "Height",
             "type": "number",
-            "decimals": true,
+            "decimals": 2,
             "min": 0.1,
             "max": 2,
             "default": 0.75
@@ -76,7 +76,7 @@
             "name": "spacing",
             "label": "Spacing",
             "type": "number",
-            "decimals": true,
+            "decimals": 2,
             "min": 0,
             "max": 2,
             "default": 0.5
@@ -114,14 +114,12 @@
                   "name": "top",
                   "label": "Top",
                   "type": "number",
-                  "decimals": true,
                   "default": 0
                 },
                 {
                   "name": "left",
                   "label": "Left",
                   "type": "number",
-                  "decimals": true,
                   "default": 0
                 }
               ]
@@ -130,7 +128,7 @@
               "name": "scale",
               "label": "Scale",
               "type": "number",
-              "decimals": true,
+              "decimals": 2,
               "min": 0.01,
               "default": 1
             }
