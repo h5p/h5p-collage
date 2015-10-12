@@ -1,14 +1,14 @@
 [
   {
     "name": "collage",
-    "label": "Collage Preview",
+    "label": "Preview",
     "type": "group",
     "widget": "collage",
     "description": "You can pan the images by dragging them. To zoom you must first click an image to gain focus, then you can use +/- on your keyboard, or simply hold down the Z key while moving your mousewheel.",
     "fields": [
       {
         "name": "template",
-        "label": "Tiling Layout",
+        "label": "Layout",
         "type": "select",
         "options": [
           {
@@ -65,7 +65,7 @@
         "fields": [
           {
             "name": "heightRatio",
-            "label": "Aspect Ratio",
+            "label": "Height",
             "type": "number",
             "decimals": true,
             "min": 0.1,
@@ -74,7 +74,7 @@
           },
           {
             "name": "spacing",
-            "label": "Tile Spacing",
+            "label": "Spacing",
             "type": "number",
             "decimals": true,
             "min": 0,
