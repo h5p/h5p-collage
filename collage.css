@@ -17,6 +17,16 @@
   box-sizing: border-box;
   position: relative;
 }
+.h5p-collage-col.h5p-collage-focus:after {
+  content: " ";
+  box-shadow: 0 0 1em #fff inset;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .h5p-collage img {
   width: 1px;
   height: 1px;

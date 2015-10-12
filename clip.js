@@ -392,6 +392,12 @@
         $img.css(offset.getPx());
         content.offset = offset.getPs();
       };
+
+      $img.on('focus', function () {
+        $container.addClass('h5p-collage-focus');
+      }).on('blur', function () {
+        $container.removeClass('h5p-collage-focus');
+      });
     };
 
     init();
