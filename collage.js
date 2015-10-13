@@ -32,13 +32,10 @@ H5P.Collage = (function ($, EventDispatcher) {
     // Create new template for adding clips to
     var template = new Collage.Template(content.options.spacing);
 
-    // Keep track of collage clips
-    var clipInstances;
-
     // Add clips to columns
     template.on('columnAdded', function (event) {
       var $col = event.data;
-      var clipIndex = clipInstances.length;
+      var clipIndex = self.clips.length;
 
       // Set default
       if (!content.clips[clipIndex]) {
@@ -47,9 +44,10 @@ H5P.Collage = (function ($, EventDispatcher) {
 
       // Add new clip
       var clip = new Collage.Clip($col, content.clips[clipIndex], contentId);
-      clipInstances.push(clip);
+      self.clips.push(clip);
 
       self.trigger('clipAdded', clip);
+      clip.load();
     });
 
     /**
@@ -76,17 +74,6 @@ H5P.Collage = (function ($, EventDispatcher) {
     };
 
     /**
-     * Make sure all the clips cover their containers.
-     *
-     * @private
-     */
-    var fitClips = function () {
-      for (var i = 0; i < clipInstances.length; i++) {
-        clipInstances[i].fit();
-      }
-    };
-
-    /**
      * Attach the collage to the given container.
      *
      * @param {H5P.jQuery} $container
@@ -106,7 +93,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      * @param {string} newLayout
      */
     self.setLayout = function (newLayout) {
-      clipInstances = [];
+      self.clips = [];
       template.setLayout(newLayout);
     };
 
@@ -117,7 +104,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      */
     self.setSpacing = function (newSpacing) {
       template.setSpacing(newSpacing);
-      fitClips();
+      $wrapper.css('borderWidth', newSpacing + 'em');
     };
 
     /**
@@ -127,7 +114,6 @@ H5P.Collage = (function ($, EventDispatcher) {
      */
     self.setFrame = function (newFrameWidth) {
       $wrapper.css('borderWidth', newFrameWidth + 'em');
-      fitClips();
     };
 
     /**
@@ -138,7 +124,6 @@ H5P.Collage = (function ($, EventDispatcher) {
     self.setHeight = function (newHeight) {
       // Update template
       $wrapper.css('height', ($wrapper.width() * newHeight) + 'px');
-      fitClips();
     };
 
     /**
