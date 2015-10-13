@@ -48,7 +48,11 @@
      */
     self.load = function () {
       if (self.empty()) {
+        $container.addClass('h5p-collage-empty');
         return; // No image set
+      }
+      else {
+        $container.removeClass('h5p-collage-empty');
       }
 
       // Create image
