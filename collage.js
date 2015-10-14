@@ -134,7 +134,8 @@ H5P.Collage = (function ($, EventDispatcher) {
         return;
       }
 
-      var width = $wrapper.width();
+      // Get outer width without rounding
+      var width = $wrapper[0].getBoundingClientRect().width;
       $wrapper.css({
         fontSize: ((width / 480) * 16) + 'px',
         height: (content.options.heightRatio * width) + 'px'
