@@ -15,11 +15,16 @@
     // Initialize event inheritance
     EventDispatcher.call(self);
 
+    // Photo wrapper
+    self.$wrapper = $('<div/>', {
+      'class': 'h5p-collage-photo',
+      appendTo: $container
+    });
+
     // Clip resource
     var $img;
 
     // Always available
-    self.$container = $container;
     self.content = content;
 
     /**
@@ -27,7 +32,7 @@
      */
     var positionImage = function (imageRatio) {
       // Find container raioratios
-      var containerSize = window.getComputedStyle($container[0]);
+      var containerSize = window.getComputedStyle(self.$wrapper[0]);
       var containerRatio = (parseFloat(containerSize.width) / parseFloat(containerSize.height));
 
       // Make sure image covers the whole container
@@ -48,11 +53,11 @@
      */
     self.load = function () {
       if (self.empty()) {
-        $container.addClass('h5p-collage-empty');
+        self.$wrapper.addClass('h5p-collage-empty');
         return; // No image set
       }
       else {
-        $container.removeClass('h5p-collage-empty');
+        self.$wrapper.removeClass('h5p-collage-empty');
       }
 
       // Create image
@@ -60,7 +65,7 @@
         'class': 'h5p-collage-image',
         alt: '',
         src: H5P.getPath(content.image.path, contentId),
-        prependTo: $container,
+        prependTo: self.$wrapper,
         on: {
           load: function () {
             // Make sure it's in the correct position
