@@ -81,6 +81,10 @@ H5P.Collage = (function ($, EventDispatcher) {
     self.attach = function ($container) {
       if ($wrapper === undefined) {
         createHtml();
+        var $parent = $container.parent();
+        if (!$parent.hasClass('h5p-frame')) {
+          $parent.css('backgroundColor', 'transparent');
+        }
       }
 
       // Add to DOM
