@@ -104,7 +104,6 @@ H5P.Collage = (function ($, EventDispatcher) {
      */
     self.setSpacing = function (newSpacing) {
       template.setSpacing(newSpacing);
-      $wrapper.css('borderWidth', newSpacing + 'em');
     };
 
     /**
