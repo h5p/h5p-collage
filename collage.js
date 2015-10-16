@@ -126,7 +126,8 @@ H5P.Collage = (function ($, EventDispatcher) {
      */
     self.setHeight = function (newHeight) {
       // Update template
-      $wrapper.css('height', ($wrapper.width() * newHeight) + 'px');
+      var wrapperSize = $wrapper[0].getBoundingClientRect();
+      $wrapper.css('height', (wrapperSize.width * newHeight) + 'px');
     };
 
     /**
