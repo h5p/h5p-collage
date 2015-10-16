@@ -4,7 +4,7 @@
     "label": "Preview",
     "type": "group",
     "widget": "collage",
-    "description": "You can pan the images by dragging them. To zoom you must first click an image to gain focus, then you can use +/- on your keyboard, or simply hold down the Z key while moving your mousewheel.",
+    "description": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
     "fields": [
       {
         "name": "template",
