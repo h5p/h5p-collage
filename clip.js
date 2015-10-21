@@ -30,7 +30,7 @@
     /**
      * @private
      */
-    var positionImage = function (imageRatio) {
+    var positionImage = function (imageRatio) {
       // Find container raioratios
       var containerSize = window.getComputedStyle(self.$wrapper[0]);
       var containerRatio = (parseFloat(containerSize.width) / parseFloat(containerSize.height));
@@ -73,7 +73,7 @@
           }
         }
       });
-      setTimeout(function () {
+      setTimeout(function () {
         // Wait for next tick to make sure everything is visible
         positionImage((content.image.width && content.image.height ? content.image.width / content.image.height : undefined));
       }, 0);
