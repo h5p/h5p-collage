@@ -93,7 +93,7 @@ H5P.Collage = (function ($, EventDispatcher) {
     };
     
     /**
-     * Trigger the 'read' xAPI event when this commences
+     * Trigger the 'consumed' xAPI event when this commences
      * 
      * (Will be more sophisticated in future version)
      */
