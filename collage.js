@@ -79,7 +79,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
-      this.triggerRead();
+      this.triggerConsumed();
       if ($wrapper === undefined) {
         createHtml();
         var $parent = $container.parent();
