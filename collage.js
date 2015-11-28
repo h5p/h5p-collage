@@ -97,7 +97,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      * 
      * (Will be more sophisticated in future version)
      */
-    self.triggerRead = function () {
+    self.triggerConsumed = function () {
       var xAPIEvent = this.createXAPIEventTemplate({
         id: 'http://activitystrea.ms/schema/1.0/consume',
         display: {
