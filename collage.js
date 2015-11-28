@@ -79,6 +79,7 @@ H5P.Collage = (function ($, EventDispatcher) {
      * @param {H5P.jQuery} $container
      */
     self.attach = function ($container) {
+      this.triggerRead();
       if ($wrapper === undefined) {
         createHtml();
         var $parent = $container.parent();
@@ -89,6 +90,25 @@ H5P.Collage = (function ($, EventDispatcher) {
 
       // Add to DOM
       $container.addClass('h5p-collage').html('').append($wrapper);
+    };
+    
+    /**
+     * Trigger the 'read' xAPI event when this commences
+     * 
+     * (Will be more sophisticated in future version)
+     */
+    self.triggerRead = function () {
+      var xAPIEvent = this.createXAPIEventTemplate({
+        id: 'http://activitystrea.ms/schema/1.0/consume',
+        display: {
+          'en-US': 'consumed'
+        }
+      }, {
+        result: {
+          completion: true
+        }
+      });
+      this.trigger(xAPIEvent);
     };
 
     /**
