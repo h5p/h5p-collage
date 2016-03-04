@@ -20,7 +20,7 @@
 .h5p-collage-photo {
   height: 100%;
 }
-.h5p-collage-photo:before {
+.h5p-collage-empty:before {
   position: absolute;
   content: "";
   background: #f6f6f6 url('h5p.svg') no-repeat center;
