@@ -91,10 +91,10 @@ H5P.Collage = (function ($, EventDispatcher) {
       // Add to DOM
       $container.addClass('h5p-collage').html('').append($wrapper);
     };
-    
+
     /**
      * Trigger the 'consumed' xAPI event when this commences
-     * 
+     *
      * (Will be more sophisticated in future version)
      */
     self.triggerConsumed = function () {
