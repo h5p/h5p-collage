@@ -1,0 +1,75 @@
+{
+  "semantics": [
+    {
+      "label": "Vorschau",
+      "description": "Die Bilder können bewegt(geschwenkt) werden, indem man sie zieht. Es kann auch ein Bild ausgewählt werden und dann mit den + oder - Tasten auf der Tastatur, oder durch einfaches betätigen der Z Taste währen das Mausrad gedreht wird, gezoomt werden.",
+      "fields": [
+        {
+          "label": "Layout",
+          "options": [
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            },
+            {
+            }
+          ],
+        },
+        {
+          "label": "Bildschirmoptionen",
+          "fields": [
+            {
+              "label": "Höhe",
+            },
+            {
+              "label": "Abstand",
+            },
+            {
+              "label": "Rahmen",
+            }
+          ]
+        },
+        {
+          "label": "Clips",
+          "field": {
+            "label": "Clip",
+            "fields": [
+              {
+                "label": "Bild"
+              },
+              {
+                "label": "Versatz",
+                "fields": [
+                  {
+                    "label": "Oben",
+                  },
+                  {
+                    "label": "Links",
+                  }
+                ]
+              },
+              {
+                "label": "Skala",
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
