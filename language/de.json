@@ -29,19 +29,19 @@
             },
             {
             }
-          ],
+          ]
         },
         {
           "label": "Bildschirmoptionen",
           "fields": [
             {
-              "label": "Höhe",
+              "label": "Höhe"
             },
             {
-              "label": "Abstand",
+              "label": "Abstand"
             },
             {
-              "label": "Rahmen",
+              "label": "Rahmen"
             }
           ]
         },
@@ -57,15 +57,15 @@
                 "label": "Versatz",
                 "fields": [
                   {
-                    "label": "Oben",
+                    "label": "Oben"
                   },
                   {
-                    "label": "Links",
+                    "label": "Links"
                   }
                 ]
               },
               {
-                "label": "Skala",
+                "label": "Skala"
               }
             ]
           }
@@ -73,3 +73,4 @@
       ]
     }
   ]
+}
