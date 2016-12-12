@@ -2,7 +2,7 @@
   {
     "name": "collage",
     "label": "Preview",
-	"importance": "high",
+    "importance": "high",
     "type": "group",
     "widget": "collage",
     "description": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
@@ -10,7 +10,7 @@
       {
         "name": "template",
         "label": "Layout",
-	    "importance": "high",
+	"importance": "high",
         "type": "select",
         "options": [
           {
@@ -63,13 +63,13 @@
       {
         "name": "options",
         "label": "Display options",
-		"importance": "low",
+	"importance": "low",
         "type": "group",
         "fields": [
           {
             "name": "heightRatio",
             "label": "Height",
-			"importance": "low",
+	    "importance": "low",
             "type": "number",
             "decimals": 2,
             "min": 0.1,
@@ -79,7 +79,7 @@
           {
             "name": "spacing",
             "label": "Spacing",
-			"importance": "low",
+	    "importance": "low",
             "type": "number",
             "decimals": 2,
             "min": 0,
@@ -89,7 +89,7 @@
           {
             "name": "frame",
             "label": "Frame",
-			"importance": "low",
+	    "importance": "low",
             "type": "boolean",
             "default": true
           }
@@ -98,39 +98,39 @@
       {
         "name": "clips",
         "label": "Clips",
-		"importance": "low",
-		"type": "list",
+	"importance": "low",
+	"type": "list",
         "min": 1,
         "entity": "clip",
         "field": {
           "name": "clip",
           "label": "Clip",
-		  "importance": "low",
+	  "importance": "low",
           "type": "group",
           "fields": [
             {
               "name": "image",
               "type": "image",
               "label": "Image",
-			  "importance": "low"
+	      "importance": "low"
             },
             {
               "name": "offset",
               "label": "Offset",
-			  "importance": "low",
+	      "importance": "low",
               "type": "group",
               "fields": [
                 {
                   "name": "top",
                   "label": "Top",
-				  "importance": "low",
+		  "importance": "low",
                   "type": "number",
                   "default": 0
                 },
                 {
                   "name": "left",
                   "label": "Left",
-				  "importance": "low",
+		  "importance": "low",
                   "type": "number",
                   "default": 0
                 }
@@ -139,7 +139,7 @@
             {
               "name": "scale",
               "label": "Scale",
-			  "importance": "low",
+	      "importance": "low",
               "type": "number",
               "decimals": 2,
               "min": 0.01,
