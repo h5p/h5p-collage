@@ -4,8 +4,8 @@
   "license": "MIT",
   "author": "Joubel AS (FAP&MVM)",
   "majorVersion": 0,
-  "minorVersion": 2,
-  "patchVersion": 2,
+  "minorVersion": 3,
+  "patchVersion": 0,
   "runnable": 1,
   "coreApi": {
     "majorVersion": 1,
@@ -31,7 +31,7 @@
     {
       "machineName": "H5PEditor.Collage",
       "majorVersion": 0,
-      "minorVersion": 2
+      "minorVersion": 3
     }
   ]
 }
