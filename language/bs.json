@@ -1,92 +1,84 @@
 {
-  "semantics": [
+  "semantics":[
     {
-      "label": "Pregled",
-      "description": "Možete pomijerati sliku okolo tako da je kliknete i nosite. Također možete označiti sliku i onda koristiti + i - na tastaturi da je zumirate ili jednostavno da držite slovo Z dok vrtite točak na mišu.",
-      "fields": [
+      "label":"Preview",
+      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "fields":[
         {
-          "label": "Raspored",
-          "options": [
+          "label":"Layout",
+          "options":[
             {
-              "label": "1"
+              "label":"1"
             },
             {
-              "label": "1-1"
+              "label":"1-1"
             },
             {
-              "englishLabel": "2",
-              "label": "2"
+              "label":"2"
             },
             {
-              "englishLabel": "2-1",
-              "label": "2-1"
+              "label":"2-1"
             },
             {
-              "englishLabel": "1-2",
-              "label": "1-2"
+              "label":"1-2"
             },
             {
-              "englishLabel": "2-2",
-              "label": "2-2"
+              "label":"2-2"
             },
             {
-              "englishLabel": "3-1",
-              "label": "3-1"
+              "label":"3-1"
             },
             {
-              "englishLabel": "1-3",
-              "label": "1-3"
+              "label":"1-3"
             },
             {
-              "englishLabel": "2-3",
-              "label": "2-3"
+              "label":"2-3"
             },
             {
-              "englishLabel": "3-2",
-              "label": "3-2"
+              "label":"3-2"
             },
             {
-              "englishLabel": "3-3",
-              "label": "3-3"
+              "label":"3-3"
+            }
+          ],
+          "default":"2-1"
+        },
+        {
+          "label":"Display options",
+          "fields":[
+            {
+              "label":"Height"
+            },
+            {
+              "label":"Spacing"
+            },
+            {
+              "label":"Frame"
             }
           ]
         },
         {
-          "label": "Opcije prikaza",
-          "fields": [
-            {
-              "label": "Visina"
-            },
-            {
-              "label": "Razmak"
-            },
-            {
-              "label": "Okvir"
-            }
-          ]
-        },
-        {
-          "label": "Klipovi",
-          "entity": "klip",
-          "field": {
-            "label": "Klip",
-            "fields": [
+          "label":"Clips",
+          "entity":"clip",
+          "field":{
+            "label":"Clip",
+            "fields":[
               {
-                "label": "Slika"
+                "label":"Image"
               },
               {
-                "label": "ofset",
-                "fields": [
+                "label":"Offset",
+                "fields":[
                   {
-                    "label": "Veh"
+                    "label":"Top"
                   },
                   {
-                    "label": "Lijevo"
+                    "label":"Left"
                   }
                 ]
               },
               {
-                "label": "Skaliranje"
+                "label":"Scale"
               }
             ]
           }
