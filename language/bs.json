@@ -1,21 +1,16 @@
 {
   "semantics": [
     {
-      "englishLabel": "Preview",
       "label": "Pregled",
-      "englishDescription": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
       "description": "Možete pomijerati sliku okolo tako da je kliknete i nosite. Također možete označiti sliku i onda koristiti + i - na tastaturi da je zumirate ili jednostavno da držite slovo Z dok vrtite točak na mišu.",
       "fields": [
         {
-          "englishLabel": "Layout",
           "label": "Raspored",
           "options": [
             {
-              "englishLabel": "1",
               "label": "1"
             },
             {
-              "englishLabel": "1-1",
               "label": "1-1"
             },
             {
@@ -57,52 +52,40 @@
           ]
         },
         {
-          "englishLabel": "Display options",
           "label": "Opcije prikaza",
           "fields": [
             {
-              "englishLabel": "Height",
               "label": "Visina"
             },
             {
-              "englishLabel": "Spacing",
               "label": "Razmak"
             },
             {
-              "englishLabel": "Frame",
               "label": "Okvir"
             }
           ]
         },
         {
-          "englishLabel": "Clips",
           "label": "Klipovi",
-          "englishEntity": "clip",
           "entity": "klip",
           "field": {
-            "englishLabel": "Clip",
             "label": "Klip",
             "fields": [
               {
-                "englishLabel": "Image",
                 "label": "Slika"
               },
               {
-                "englishLabel": "Offset",
                 "label": "ofset",
                 "fields": [
                   {
-                    "englishLabel": "Top",
                     "label": "Veh"
                   },
                   {
-                    "englishLabel": "Left",
                     "label": "Lijevo"
                   }
                 ]
               },
               {
-                "englishLabel": "Scale",
                 "label": "Skaliranje"
               }
             ]
