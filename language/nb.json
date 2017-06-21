@@ -1,9 +1,7 @@
 {
   "semantics": [
     {
-      "englishLabel": "Preview",
       "label": "Fordhåndsvisning",
-      "englishDescription": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
       "description": "Dru kan flytte bilder rundt ved å dra de. Du kan bruke + og - for å justere størrelsen når et bilde er valgt, eller ved å holde inne 'Z' og bruker musehjulet.",
       "fields": [
         {
