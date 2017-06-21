@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Pregled",
-      "description":"Možete pomijerati sliku okolo tako da je kliknete i nosite. Također možete označiti sliku i onda koristiti + i - na tastaturi da je zumirate ili jednostavno da držite slovo Z dok vrtite točak na mišu.",
+      "label":"Preview",
+      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
       "fields":[
         {
-          "label":"Raspored",
+          "label":"Layout",
           "options":[
             {
               "label":"1"
@@ -40,45 +40,45 @@
             {
               "label":"3-3"
             }
-            ],
-            "default":"2-1"
+          ],
+          "default":"2-1"
         },
         {
-          "label":"Opcije prikaza",
+          "label":"Display options",
           "fields":[
             {
-              "label":"Visina"
+              "label":"Height"
             },
             {
-              "label":"Razmak"
+              "label":"Spacing"
             },
             {
-              "label":"Okvir"
+              "label":"Frame"
             }
           ]
         },
         {
-          "label":"Klipovi",
-          "entity":"klip",
+          "label":"Clips",
+          "entity":"clip",
           "field":{
-            "label":"Klip",
+            "label":"Clip",
             "fields":[
               {
-                "label":"Slika"
+                "label":"Image"
               },
               {
-                "label":"ofset",
+                "label":"Offset",
                 "fields":[
                   {
-                    "label":"Veh"
+                    "label":"Top"
                   },
                   {
-                    "label":"Lijevo"
+                    "label":"Left"
                   }
                 ]
               },
               {
-                "label":"Skaliranje"
+                "label":"Scale"
               }
             ]
           }
