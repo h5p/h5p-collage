@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Fordhåndsvisning",
-      "description": "Dru kan flytte bilder rundt ved å dra de. Du kan bruke + og - for å justere størrelsen når et bilde er valgt, eller ved å holde inne 'Z' og bruker musehjulet.",
+      "label": "Preview",
+      "description": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
       "fields": [
         {
-          "label": "Oppsett",
+          "label": "Layout",
           "options": [
             {
               "label": "1"
@@ -40,44 +40,45 @@
             {
               "label": "3-3"
             }
-          ]
+          ],
+          "default": "2-1"
         },
         {
-          "label": "Visningsalternativer",
+          "label": "Display options",
           "fields": [
             {
-              "label": "Høyde"
+              "label": "Height"
             },
             {
-              "label": "Avstand"
+              "label": "Spacing"
             },
             {
-              "label": "Ramme"
+              "label": "Frame"
             }
           ]
         },
         {
-          "label": "Klipp",
-          "entity": "klipp",
+          "label": "Clips",
+          "entity": "clip",
           "field": {
-            "label": "Klipp",
+            "label": "Clip",
             "fields": [
               {
-                "label": "Bilde"
+                "label": "Image"
               },
               {
-                "label": "Forskyvelse",
+                "label": "Offset",
                 "fields": [
                   {
-                    "label": "Topp"
+                    "label": "Top"
                   },
                   {
-                    "label": "Venstre"
+                    "label": "Left"
                   }
                 ]
               },
               {
-                "label": "Skalering"
+                "label": "Scale"
               }
             ]
           }
