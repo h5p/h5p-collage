@@ -47,38 +47,38 @@
           "label":"Darstellungsoptionen",
           "fields":[
             {
-              "label":"Height"
+              "label":"Höhe"
             },
             {
-              "label":"Spacing"
+              "label":"Abstand"
             },
             {
-              "label":"Frame"
+              "label":"Rahmen"
             }
           ]
         },
         {
           "label":"Clips",
-          "entity":"clip",
+          "entity":"Clip",
           "field":{
             "label":"Clip",
             "fields":[
               {
-                "label":"Image"
+                "label":"Bild"
               },
               {
-                "label":"Offset",
+                "label":"Versatz",
                 "fields":[
                   {
-                    "label":"Top"
+                    "label":"Oben"
                   },
                   {
-                    "label":"Left"
+                    "label":"Links"
                   }
                 ]
               },
               {
-                "label":"Scale"
+                "label":"Maßstab"
               }
             ]
           }
