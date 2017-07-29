@@ -1,8 +1,8 @@
 {
   "semantics":[
     {
-      "label":"Preview",
-      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label":"Vorschau",
+      "description":"Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad bewegen.",
       "fields":[
         {
           "label":"Layout",
@@ -44,7 +44,7 @@
           "default":"2-1"
         },
         {
-          "label":"Display options",
+          "label":"Darstellungsoptionen",
           "fields":[
             {
               "label":"Height"
