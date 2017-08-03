@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Fordhåndsvisning",
-      "description": "Dru kan flytte bilder rundt ved å dra de. Du kan bruke + og - for å justere størrelsen når et bilde er valgt, eller ved å holde inne 'Z' og bruker musehjulet.",
+      "label": "Pregled",
+      "description": "Možete pomijerati sliku okolo tako da je kliknete i nosite. Također možete označiti sliku i onda koristiti + i - na tastaturi da je zumirate ili jednostavno da držite slovo Z dok vrtite točak na mišu.",
       "fields": [
         {
-          "label": "Oppsett",
+          "label": "Raspored",
           "options": [
             {
               "label": "1"
@@ -43,41 +43,41 @@
           ]
         },
         {
-          "label": "Visningsalternativer",
+          "label": "Opcije prikaza",
           "fields": [
             {
-              "label": "Høyde"
+              "label": "Visina"
             },
             {
-              "label": "Avstand"
+              "label": "Razmak"
             },
             {
-              "label": "Ramme"
+              "label": "Okvir"
             }
           ]
         },
         {
-          "label": "Klipp",
-          "entity": "klipp",
+          "label": "Klipovi",
+          "entity": "klip",
           "field": {
-            "label": "Klipp",
+            "label": "Klip",
             "fields": [
               {
-                "label": "Bilde"
+                "label": "Slika"
               },
               {
-                "label": "Forskyvelse",
+                "label": "ofset",
                 "fields": [
                   {
-                    "label": "Topp"
+                    "label": "Veh"
                   },
                   {
-                    "label": "Venstre"
+                    "label": "Lijevo"
                   }
                 ]
               },
               {
-                "label": "Skalering"
+                "label": "Skaliranje"
               }
             ]
           }
