@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Aperçu",
-      "description":"Vous pouvez déplacer chaque image en la faisant glisser. Après avoir sélectionné une image, vous pouvez appuyer sur les touches + et - de votre clavier pour zoomer. Sinon, maintenez enfoncée la touche Z du clavier, tout en faisant rouler la molette de la souris.",
+      "label":"Preview",
+      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
       "fields":[
         {
-          "label":"Modèle",
+          "label":"Layout",
           "options":[
             {
               "label":"1"
@@ -44,41 +44,41 @@
           "default":"2-1"
         },
         {
-          "label":"Options d'affichage",
+          "label":"Display options",
           "fields":[
             {
-              "label":"Hauteur"
+              "label":"Height"
             },
             {
-              "label":"Espacement"
+              "label":"Spacing"
             },
             {
-              "label":"Cadre"
+              "label":"Frame"
             }
           ]
         },
         {
-          "label":"Découpes",
-          "entity":"découpe",
+          "label":"Clips",
+          "entity":"clip",
           "field":{
-            "label":"Découpe",
+            "label":"Clip",
             "fields":[
               {
                 "label":"Image"
               },
               {
-                "label":"Décalage (offset)",
+                "label":"Offset",
                 "fields":[
                   {
-                    "label":"En haut"
+                    "label":"Top"
                   },
                   {
-                    "label":"A gauche"
+                    "label":"Left"
                   }
                 ]
               },
               {
-                "label":"Echelle"
+                "label":"Scale"
               }
             ]
           }

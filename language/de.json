@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Aperçu",
-      "description":"Vous pouvez déplacer chaque image en la faisant glisser. Après avoir sélectionné une image, vous pouvez appuyer sur les touches + et - de votre clavier pour zoomer. Sinon, maintenez enfoncée la touche Z du clavier, tout en faisant rouler la molette de la souris.",
+      "label":"Vorschau",
+      "description":"Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad bewegen.",
       "fields":[
         {
-          "label":"Modèle",
+          "label":"Layout",
           "options":[
             {
               "label":"1"
@@ -44,41 +44,41 @@
           "default":"2-1"
         },
         {
-          "label":"Options d'affichage",
+          "label":"Darstellungsoptionen",
           "fields":[
             {
-              "label":"Hauteur"
+              "label":"Höhe"
             },
             {
-              "label":"Espacement"
+              "label":"Abstand"
             },
             {
-              "label":"Cadre"
+              "label":"Rahmen"
             }
           ]
         },
         {
-          "label":"Découpes",
-          "entity":"découpe",
+          "label":"Clips",
+          "entity":"Clip",
           "field":{
-            "label":"Découpe",
+            "label":"Clip",
             "fields":[
               {
-                "label":"Image"
+                "label":"Bild"
               },
               {
-                "label":"Décalage (offset)",
+                "label":"Versatz",
                 "fields":[
                   {
-                    "label":"En haut"
+                    "label":"Oben"
                   },
                   {
-                    "label":"A gauche"
+                    "label":"Links"
                   }
                 ]
               },
               {
-                "label":"Echelle"
+                "label":"Maßstab"
               }
             ]
           }
