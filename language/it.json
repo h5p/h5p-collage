@@ -1,8 +1,8 @@
 {
   "semantics":[
     {
-      "label":"Preview",
-      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label":"Anteprima",
+      "description":"Puoi posizionare le immagini trascinandole. Puoi anche selezionare un'immagine e poi usare i tasti + o - sulla tastiera per ingrandire - o semplicemente tenere premuto il tasto Z mentre muovi la rotellina del mouse.",
       "fields":[
         {
           "label":"Layout",
@@ -44,41 +44,41 @@
           "default":"2-1"
         },
         {
-          "label":"Display options",
+          "label":"Opzioni di visualizzazione",
           "fields":[
             {
-              "label":"Height"
+              "label":"Altezza"
             },
             {
-              "label":"Spacing"
+              "label":"Spaziatura"
             },
             {
-              "label":"Frame"
+              "label":"Cornice"
             }
           ]
         },
         {
-          "label":"Clips",
+          "label":"Clip",
           "entity":"clip",
           "field":{
             "label":"Clip",
             "fields":[
               {
-                "label":"Image"
+                "label":"Immagine"
               },
               {
-                "label":"Offset",
+                "label":"Slittamento",
                 "fields":[
                   {
-                    "label":"Top"
+                    "label":"In alto"
                   },
                   {
-                    "label":"Left"
+                    "label":"A sinistra"
                   }
                 ]
               },
               {
-                "label":"Scale"
+                "label":"Ridimensiona"
               }
             ]
           }
