@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Aperçu",
-      "description":"Vous pouvez déplacer chaque image en la faisant glisser. Après avoir sélectionné une image, vous pouvez appuyer sur les touches + et - de votre clavier pour zoomer. Sinon, maintenez enfoncée la touche Z du clavier, tout en faisant rouler la molette de la souris.",
+      "label":"Pregled",
+      "description":"Možete pomijerati sliku okolo tako da je kliknete i nosite. Također možete označiti sliku i onda koristiti + i - na tastaturi da je zumirate ili jednostavno da držite slovo Z dok vrtite točak na mišu.",
       "fields":[
         {
-          "label":"Modèle",
+          "label":"Raspored",
           "options":[
             {
               "label":"1"
@@ -44,41 +44,41 @@
           "default":"2-1"
         },
         {
-          "label":"Options d'affichage",
+          "label":"Opcije prikaza",
           "fields":[
             {
-              "label":"Hauteur"
+              "label":"Visina"
             },
             {
-              "label":"Espacement"
+              "label":"Razmak"
             },
             {
-              "label":"Cadre"
+              "label":"Okvir"
             }
           ]
         },
         {
-          "label":"Découpes",
-          "entity":"découpe",
+          "label":"Klipovi",
+          "entity":"klip",
           "field":{
-            "label":"Découpe",
+            "label":"Klip",
             "fields":[
               {
-                "label":"Image"
+                "label":"Slika"
               },
               {
-                "label":"Décalage (offset)",
+                "label":"ofset",
                 "fields":[
                   {
-                    "label":"En haut"
+                    "label":"Veh"
                   },
                   {
-                    "label":"A gauche"
+                    "label":"Lijevo"
                   }
                 ]
               },
               {
-                "label":"Echelle"
+                "label":"Skaliranje"
               }
             ]
           }
