@@ -1,8 +1,8 @@
 {
   "semantics":[
     {
-      "label":"Preview",
-      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label":"Eksempel",
+      "description":"Rækkefølgen ændres ved at trække billederne til den ønskede position. Alternativt, zoom ved at vælge et billede og bruge + eller - tasterne på tastaturet. Alternativt hold z tasten nede på tastaturet og zoom med hjulet på musen.",
       "fields":[
         {
           "label":"Layout",
@@ -47,13 +47,13 @@
           "label":"Display options",
           "fields":[
             {
-              "label":"Height"
+              "label":"Højde"
             },
             {
-              "label":"Spacing"
+              "label":"Mellemrum"
             },
             {
-              "label":"Frame"
+              "label":"Ramme"
             }
           ]
         },
