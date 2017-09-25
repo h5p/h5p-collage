@@ -1,4 +1,8 @@
 H5P Collage
 ==========
 
-Put togheter images in a beautiful collage for your web site og blog.
+Put together images in a beautiful collage for your web site og blog.
+
+## License
+
+*H5P Collage* is [MIT licenced](LICENCE.md)
