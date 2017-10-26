@@ -63,7 +63,8 @@
       // Create image
       $img = $('<img/>', {
         'class': 'h5p-collage-image',
-        alt: '',
+        alt: content.alt,
+        title: content.title,
         src: H5P.getPath(content.image.path, contentId),
         prependTo: self.$wrapper,
         on: {

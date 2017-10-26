@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Preview",
-      "description":"You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label":"Esikatselu",
+      "description":"Voit liikuttaa kuvaa raahaamalla. Voit valita kuvan ja sitten käyttää + tai - näppäimiä (tai pitää Z-näppäintä painettuna, kun liikutat hiiren pyörää) zoomataksesi.",
       "fields":[
         {
-          "label":"Layout",
+          "label":"Asettelu",
           "options":[
             {
               "label":"1"
@@ -44,41 +44,41 @@
           "default":"2-1"
         },
         {
-          "label":"Display options",
+          "label":"Näyttövalinnat",
           "fields":[
             {
-              "label":"Height"
+              "label":"Korkeus"
             },
             {
-              "label":"Spacing"
+              "label":"Välistys"
             },
             {
-              "label":"Frame"
+              "label":"Kehys"
             }
           ]
         },
         {
-          "label":"Clips",
-          "entity":"clip",
+          "label":"Leikkeet",
+          "entity":"leike",
           "field":{
-            "label":"Clip",
+            "label":"Leike",
             "fields":[
               {
-                "label":"Image"
+                "label":"Kuva"
               },
               {
-                "label":"Offset",
+                "label":"Etäisyys",
                 "fields":[
                   {
-                    "label":"Top"
+                    "label":"Ylhäältä"
                   },
                   {
-                    "label":"Left"
+                    "label":"Vasemmalta"
                   }
                 ]
               },
               {
-                "label":"Scale"
+                "label":"Koko"
               }
             ]
           }
