@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Preview",
-      "description": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label": "Önizle",
+      "description": "Resimleri sürükleyerek yerlerini değiştirebilirsiniz. Ayrıca resmi seçtikten sonra kalvyeden + veya - tuşlarını kullanarak ya da z tuşuna basılı tutup farenin tekerleğini değiştirerek yakınlaştırma ve uzaklaştırma yapabilirsiniz.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "Düzen",
           "options": [
             {
               "label": "1"
@@ -43,16 +43,16 @@
           ]
         },
         {
-          "label": "Display options",
+          "label": "Görünüm seçenekleri",
           "fields": [
             {
-              "label": "Height"
+              "label": "Yükseklik"
             },
             {
-              "label": "Spacing"
+              "label": "Boşluk"
             },
             {
-              "label": "Frame"
+              "label": "Çerçeve"
             }
           ]
         },
@@ -63,29 +63,29 @@
             "label": "Clip",
             "fields": [
               {
-                "label": "Image"
+                "label": "Resin"
               },
               {
                 "label": "Offset",
                 "fields": [
                   {
-                    "label": "Top"
+                    "label": "Üst"
                   },
                   {
-                    "label": "Left"
+                    "label": "Sol"
                   }
                 ]
               },
               {
-                "label": "Alternative text",
-                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+                "label": "Alternatif metin",
+                "description": "Gerekli. Eğer tarayıcınız bu resmi yükleyemezse onun yerine bu metin görünecektir. Ayrıca metni sesli okuyan programlarca kullanılır."
               },
               {
-                "label": "Hover text",
-                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
+                "label": "Fare üzerinde metni",
+                "description": "İsteğe bağlı. Kullanıcı işaretleme cihazını resmin üzerinde gezdirdiğinde gösterilecek metin."
               },
               {
-                "label": "Scale"
+                "label": "Ölçek"
               }
             ]
           }
