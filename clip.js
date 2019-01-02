@@ -27,10 +27,24 @@
     // Always available
     self.content = content;
 
+    // Keep track of image has been positioned
+    let isPositioned = false;
+
     /**
-     * @private
+     * Position the clip image according to params.
      */
-    var positionImage = function (imageRatio) {
+    self.positionImage = function () {
+      if (self.$wrapper[0].offsetParent === null || isPositioned) {
+        return; // Not visible, position will not be correct
+      }
+
+      // Determine image ratio
+      const imageRatio = $img[0].width ? ($img[0].width / $img[0].height) : (content.image.width && content.image.height ? content.image.width / content.image.height : null);
+      if (imageRatio === null) {
+        return; // Skip
+      }
+      isPositioned = true;
+
       // Find container raioratios
       var containerSize = window.getComputedStyle(self.$wrapper[0]);
       var containerRatio = (parseFloat(containerSize.width) / parseFloat(containerSize.height));
@@ -70,13 +84,13 @@
         on: {
           load: function () {
             // Make sure it's in the correct position
-            positionImage(this.width / this.height);
+            self.positionImage();
           }
         }
       });
       setTimeout(function () {
         // Wait for next tick to make sure everything is visible
-        positionImage((content.image.width && content.image.height ? content.image.width / content.image.height : undefined));
+        self.positionImage();
       }, 0);
       self.trigger('change', $img);
     };
@@ -88,6 +102,15 @@
      */
     self.empty = function () {
       return !content.image;
+    };
+
+    /**
+     * Check if the current clip is positioned yet.
+     *
+     * @returns {boolean}
+     */
+    self.isPositioned = function () {
+      return isPositioned;
     };
   };
 
