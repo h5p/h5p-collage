@@ -34,7 +34,7 @@
      * Position the clip image according to params.
      */
     self.positionImage = function () {
-      if (self.$wrapper[0].offsetParent === null || isPositioned) {
+      if (self.$wrapper[0].offsetParent === null || isPositioned || !$img || !$img.length) {
         return; // Not visible, position will not be correct
       }
 
