@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Preview",
-      "description": "You can move(pan) the images around by dragging them. You can also select an image and then use the + or - keys on your keyboard to zoom or simply hold down the Z key while moving your mouse wheel.",
+      "label": "معاينة",
+      "description": "يمكنك تحريك الصور حولها بسحبها. يمكنك أيضًا تحديد صورة ثم استخدام مفتاحي + أو - في لوحة المفاتيح للتكبير أو ببساطة الضغط باستمرار على المفتاح Z أثناء تحريك عجلة الماوس.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "النسق",
           "options": [
             {
               "label": "1"
@@ -43,46 +43,46 @@
           ]
         },
         {
-          "label": "Display options",
+          "label": "خيارات العرض",
           "fields": [
             {
-              "label": "Height"
+              "label": "الارتفاع"
             },
             {
-              "label": "Spacing"
+              "label": "التباعد"
             },
             {
-              "label": "Frame"
+              "label": "الإطار"
             }
           ]
         },
         {
-          "label": "Clips",
+          "label": "قصاصات",
           "entity": "clip",
           "field": {
-            "label": "Clip",
+            "label": "قصاصة",
             "fields": [
               {
-                "label": "Image"
+                "label": "صورة"
               },
               {
-                "label": "Offset",
+                "label": "الازاحة",
                 "fields": [
                   {
-                    "label": "Top"
+                    "label": "اعلى"
                   },
                   {
-                    "label": "Left"
+                    "label": "يسار"
                   }
                 ]
               },
               {
-                "label": "Alternative text",
-                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+                "label": "النص البديل",
+                "description": "مطلوب. إذا تعذر على المتصفح تحميل الصورة ، فسيتم عرض هذا النص بدلاً من ذلك. تستخدم أيضا من قبل تقنية  تحويل النص الى كلام."
               },
               {
-                "label": "Hover text",
-                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
+                "label": "النص الحائم",
+                "description": "اختياري. يتم عرض هذا النص عندما يمرر المستخدمالمؤشر فوق الصورة."
               },
               {
                 "label": "Scale"

@@ -164,6 +164,13 @@ H5P.Collage = (function ($, EventDispatcher) {
         fontSize: ((width / 480) * 16) + 'px',
         height: (content.options.heightRatio * width) + 'px'
       });
+
+      // Position clips
+      for (let i = 0; i < self.clips.length; i++) {
+        if (!self.clips[i].isPositioned()) {
+          self.clips[i].positionImage()
+        }
+      }
     });
   }
 

@@ -40,8 +40,7 @@
             {
               "label":"3-3"
             }
-          ],
-          "default":"2-1"
+          ]
         },
         {
           "label":"Display options",
@@ -76,6 +75,14 @@
                     "label":"Left"
                   }
                 ]
+              },
+              {
+                "label": "Alternative text",
+                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+              },
+              {
+                "label": "Hover text",
+                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
               },
               {
                 "label":"Scale"

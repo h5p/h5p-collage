@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Vorschau",
-      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "label": "Aurrebista",
+      "description": "Irudiak arrastatuz mugitzen ahal dituzu. Posible duzu ere irudia hautatu eta + eta – teklen bidez zooma egiteko edo Z tekla sakatuta eragin saguaren gurpilari.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "Geruza",
           "options": [
             {
               "label": "1"
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Darstellungsoptionen",
+          "label": "Bistaratzeko aukerak",
           "fields": [
             {
-              "label": "Höhe"
+              "label": "Altuera"
             },
             {
-              "label": "Abstand"
+              "label": "Tartea"
             },
             {
-              "label": "Rahmen"
+              "label": "Markoa"
             }
           ]
         },
         {
-          "label": "Clips",
-          "entity": "Clip",
+          "label": "Clipak",
+          "entity": "clip",
           "field": {
             "label": "Clip",
             "fields": [
               {
-                "label": "Bild"
+                "label": "Irudia"
               },
               {
-                "label": "Versatz",
+                "label": "Desplazamendua",
                 "fields": [
                   {
-                    "label": "Oben"
+                    "label": "Goia"
                   },
                   {
-                    "label": "Links"
+                    "label": "Ezkerra"
                   }
                 ]
               },
               {
-                "label": "Alternativtext",
-                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+                "label": "Ordezko testua",
+                "description": "Beharrezkoa. Nabigatzaileak irudia ezin badu kargatu testu hau irudiaren ordez agertuko da. Irakurtzeko bozgorailuak ere erabiliko du."
               },
               {
-                "label": "Mouseover-Text",
-                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+                "label": "Desplazamendu testua",
+                "description": "Aukerakoa. Testu hau bistaratzen da erabiltzaileak punteroa irudiaren gainetik pasatzen duenean."
               },
               {
-                "label": "Maßstab"
+                "label": "Eskala"
               }
             ]
           }

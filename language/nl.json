@@ -1,8 +1,8 @@
 {
   "semantics": [
     {
-      "label": "Vorschau",
-      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "label": "Voorvertoning",
+      "description": "Je kunt de afbeeldingen verplaatsen door ze te verschuiven. Je kunt ook een afbeelding selecteren en dan op de + of - knop te drukken om te zoomen of houd de Z-knop ingedrukt terwijl je je muiswiel draait.",
       "fields": [
         {
           "label": "Layout",
@@ -43,33 +43,33 @@
           ]
         },
         {
-          "label": "Darstellungsoptionen",
+          "label": "Toon opties",
           "fields": [
             {
-              "label": "Höhe"
+              "label": "Hoogte"
             },
             {
-              "label": "Abstand"
+              "label": "Tussenruimte"
             },
             {
-              "label": "Rahmen"
+              "label": "Lijst"
             }
           ]
         },
         {
-          "label": "Clips",
-          "entity": "Clip",
+          "label": "Fragmenten",
+          "entity": "Fragment",
           "field": {
-            "label": "Clip",
+            "label": "Fragment",
             "fields": [
               {
-                "label": "Bild"
+                "label": "Afbeelding"
               },
               {
-                "label": "Versatz",
+                "label": "Compensatie",
                 "fields": [
                   {
-                    "label": "Oben"
+                    "label": "Boven"
                   },
                   {
                     "label": "Links"
@@ -77,15 +77,15 @@
                 ]
               },
               {
-                "label": "Alternativtext",
-                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+                "label": "Alternatieve tekst",
+                "description": "Verplicht. Als de browser de afbeelding niet kan tonen zal deze tekst getoond worden. Ook gebruikt door readspeakers."
               },
               {
-                "label": "Mouseover-Text",
-                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+                "label": "Hover tekst",
+                "description": "Optioneel. Deze tekst wordt getoond als de gebruiker met de muis over de afbeelding zweeft."
               },
               {
-                "label": "Maßstab"
+                "label": "Schaal"
               }
             ]
           }

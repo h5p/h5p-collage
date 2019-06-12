@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Vorschau",
-      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "label": "預覽",
+      "description": "用拖曳方式可改變平移圖片，用鍵盤上的 + 或 - 鍵或是按住 Z 鍵加滑鼠滾輪可大圖片。",
       "fields": [
         {
-          "label": "Layout",
+          "label": "版型",
           "options": [
             {
               "label": "1"
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Darstellungsoptionen",
+          "label": "顯示設定",
           "fields": [
             {
-              "label": "Höhe"
+              "label": "高度"
             },
             {
-              "label": "Abstand"
+              "label": "間距"
             },
             {
-              "label": "Rahmen"
+              "label": "邊框"
             }
           ]
         },
         {
-          "label": "Clips",
-          "entity": "Clip",
+          "label": "所有圖片",
+          "entity": "clip",
           "field": {
-            "label": "Clip",
+            "label": "圖片",
             "fields": [
               {
-                "label": "Bild"
+                "label": "圖像"
               },
               {
-                "label": "Versatz",
+                "label": "位移",
                 "fields": [
                   {
-                    "label": "Oben"
+                    "label": "靠上"
                   },
                   {
-                    "label": "Links"
+                    "label": "靠左"
                   }
                 ]
               },
               {
-                "label": "Alternativtext",
-                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+                "label": "替代文字",
+                "description": "必填，當瀏覽器無法載入圖片時顯示的文字，同時也用在報讀器。"
               },
               {
-                "label": "Mouseover-Text",
-                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+                "label": "懸停時文字",
+                "description": "非必填，當使用者懸停在圖片時額外顯示的文字。"
               },
               {
-                "label": "Maßstab"
+                "label": "縮放"
               }
             ]
           }

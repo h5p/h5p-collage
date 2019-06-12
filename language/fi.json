@@ -1,11 +1,11 @@
 {
   "semantics":[
     {
-      "label":"Fordhåndsvisning",
-      "description":"Dru kan flytte bilder rundt ved å dra de. Du kan bruke + og - for å justere størrelsen når et bilde er valgt, eller ved å holde inne 'Z' og bruker musehjulet.",
+      "label":"Esikatselu",
+      "description":"Voit liikuttaa kuvaa raahaamalla. Voit valita kuvan ja sitten käyttää + tai - näppäimiä (tai pitää Z-näppäintä painettuna, kun liikutat hiiren pyörää) zoomataksesi.",
       "fields":[
         {
-          "label":"Oppsett",
+          "label":"Asettelu",
           "options":[
             {
               "label":"1"
@@ -43,36 +43,36 @@
           ]
         },
         {
-          "label":"Visningsalternativer",
+          "label":"Näyttövalinnat",
           "fields":[
             {
-              "label":"Høyde"
+              "label":"Korkeus"
             },
             {
-              "label":"Avstand"
+              "label":"Välistys"
             },
             {
-              "label":"Ramme"
+              "label":"Kehys"
             }
           ]
         },
         {
-          "label":"Klipp",
-          "entity":"klipp",
+          "label":"Leikkeet",
+          "entity":"leike",
           "field":{
-            "label":"Klipp",
+            "label":"Leike",
             "fields":[
               {
-                "label":"Bilde"
+                "label":"Kuva"
               },
               {
-                "label":"Forskyvelse",
+                "label":"Etäisyys",
                 "fields":[
                   {
-                    "label":"Topp"
+                    "label":"Ylhäältä"
                   },
                   {
-                    "label":"Venstre"
+                    "label":"Vasemmalta"
                   }
                 ]
               },
@@ -85,7 +85,7 @@
                 "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
               },
               {
-                "label":"Skalering"
+                "label":"Koko"
               }
             ]
           }

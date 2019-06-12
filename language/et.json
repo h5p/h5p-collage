@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Vorschau",
-      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "label": "Eelvaade",
+      "description": "Pilte saad liigutada neid lohistades. Pildi suuruse muutmiseks vali pilt ja kasuta klaviatuuri + ja - klahve või hoia all Z klahvi, pöörates samal ajal hiire ketast.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "Asetus",
           "options": [
             {
               "label": "1"
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Darstellungsoptionen",
+          "label": "Kuva valikud",
           "fields": [
             {
-              "label": "Höhe"
+              "label": "Kõrgus"
             },
             {
-              "label": "Abstand"
+              "label": "Vahed"
             },
             {
-              "label": "Rahmen"
+              "label": "Raam"
             }
           ]
         },
         {
-          "label": "Clips",
-          "entity": "Clip",
+          "label": "Lõiked",
+          "entity": "lõige",
           "field": {
-            "label": "Clip",
+            "label": "lõige",
             "fields": [
               {
-                "label": "Bild"
+                "label": "Pilt"
               },
               {
-                "label": "Versatz",
+                "label": "Kaugus",
                 "fields": [
                   {
-                    "label": "Oben"
+                    "label": "Ülalt"
                   },
                   {
-                    "label": "Links"
+                    "label": "Vasakult"
                   }
                 ]
               },
               {
-                "label": "Alternativtext",
-                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+                "label": "Alternatiivne tekst",
+                "description": "Nõutud. Kui brauser ei saa pilti laadida, siis näidatakse pildi asemel seda teksti. Seda teksti kasutatakse ka tekstilugeriga."
               },
               {
-                "label": "Mouseover-Text",
-                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+                "label": "Abitekst",
+                "description": "Ei ole kohustuslik. Seda teksti näidatakse, kui kasutaja hoiab osutusseadme kursorit pildi kohal."
               },
               {
-                "label": "Maßstab"
+                "label": "Skaala"
               }
             ]
           }

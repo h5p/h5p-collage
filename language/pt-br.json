@@ -1,8 +1,8 @@
 {
   "semantics": [
     {
-      "label": "Vorschau",
-      "description": "Du kannst die Bilder durch Ziehen verschieben. Du kannst auch ein Bild anwählen und dann die + oder - Tasten auf deiner Tastatur zum Zoomen benutzen oder dafür die Taste Z gedrückt halten und das Mausrad drehen.",
+      "label": "Pré-visualização",
+      "description": "Você pode mover (deslocar) as imagens arrastando-as. Você também pode selecionar uma imagem e então utilzar as teclas + ou - no seu teclado ou simplesmente pressionar a tecla Z enquanto move a roda do mouse para dar zoom.",
       "fields": [
         {
           "label": "Layout",
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Darstellungsoptionen",
+          "label": "Opções de exibição",
           "fields": [
             {
-              "label": "Höhe"
+              "label": "Altura"
             },
             {
-              "label": "Abstand"
+              "label": "Espaçamento"
             },
             {
-              "label": "Rahmen"
+              "label": "Quadro"
             }
           ]
         },
         {
-          "label": "Clips",
-          "entity": "Clip",
+          "label": "Clipes",
+          "entity": "clip",
           "field": {
-            "label": "Clip",
+            "label": "Clipe",
             "fields": [
               {
-                "label": "Bild"
+                "label": "Imagem"
               },
               {
-                "label": "Versatz",
+                "label": "Posição",
                 "fields": [
                   {
-                    "label": "Oben"
+                    "label": "Topo"
                   },
                   {
-                    "label": "Links"
+                    "label": "Esquerda"
                   }
                 ]
               },
               {
-                "label": "Alternativtext",
-                "description": "Erforderlich. Falls das Bild nicht geladen werden kann, wird dieser Text stattdessen angezeigt. Wird auch von Vorlesewerkzeugen genutzt (Barrierefreiheit)."
+                "label": "Texto alternativo",
+                "description": "Obrigatório. Se o navegador não for capaz de exibir a imagem, este texto será exibido. Também utilizado por leitores de tela."
               },
               {
-                "label": "Mouseover-Text",
-                "description": "Optional. Dieser Text wird angezeigt, wenn der Mauszeiger über dem Bild ruht."
+                "label": "Texto flutuante",
+                "description": "Opcional. Este texto será exibido se o usuário colocar o ponteiro sobre a imagem."
               },
               {
-                "label": "Maßstab"
+                "label": "Escala"
               }
             ]
           }
