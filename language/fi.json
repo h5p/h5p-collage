@@ -77,12 +77,12 @@
                 ]
               },
               {
-                "label": "Alternative text",
-                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+                "label": "Vaihtoehtoinen teksti.",
+                "description": "Pakollinen tieto. Jos selain ei pysty lataamaan kuvaa tämä teksti näytetään kuvan sijasta. Myös ruudunlukijat lukevat tämän tiedon."
               },
               {
-                "label": "Hover text",
-                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
+                "label": "Hover teksti",
+                "description": "Vapaaehtoinen. Tämä teksti näytetään kun käyttäjä vie hiirenkursorin kuvan päälle. "
               },
               {
                 "label":"Koko"
