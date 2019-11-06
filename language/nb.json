@@ -77,12 +77,12 @@
                 ]
               },
               {
-                "label": "Alternative text",
-                "description": "Required. If the browser can't load the image this text will be displayed instead. Also used by readspeakers."
+                "label": "Alternativ tekst",
+                "description": "Obligatorisk. Denne teksten vises hvis nettleseren ikke kan laste bildet. I tilleg brukes den av readspeakers."
               },
               {
-                "label": "Hover text",
-                "description": "Optional. This text is displayed when the user hovers his pointing device over the image."
+                "label": "Svevetekst",
+                "description": "Valgfri. Denne teksten vises når brukeren flytter muspekeren over bildet."
               },
               {
                 "label":"Skalering"
