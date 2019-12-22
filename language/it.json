@@ -2,7 +2,7 @@
   "semantics": [
     {
       "label": "Anteprima",
-      "description": "Puoi spostare le immagini intorno alla zona di trascinamento. Puoi anche selezionare un'immagine e poi usare i tasti + o - della tastiera per zoommare, o semplicemente tenere premuto il tasto Z mentre muovi la ruota del tuo mouse.",
+      "description": "Puoi spostare le immagini intorno alla zona di trascinamento. Puoi anche selezionare un'immagine e poi usare i tasti + o - della tastiera per zoommare, o semplicemente tenere premuto il tasto Z mentre muovi la ruota del tuo mouse",
       "fields": [
         {
           "label": "Layout",
@@ -69,7 +69,7 @@
                 "label": "Offset",
                 "fields": [
                   {
-                    "label": "Sopra"
+                    "label": "In alto"
                   },
                   {
                     "label": "Sinistra"
@@ -78,11 +78,11 @@
               },
               {
                 "label": "Testo alternativo",
-                "description": "Obbligatorio. Se il browser non può caricare l'immagine sarà mostrato questo testo. Usato anche dai lettori vocali."
+                "description": "Obbligatorio. Se il browser non può caricare l'immagine sarà mostrato questo testo. Usato anche dai lettori vocali"
               },
               {
                 "label": "Testo in sovraimpressione",
-                "description": "Facoltativo. Questo testo viene mostrato quando l'utente passa sopra l'immagine con il suo puntatore."
+                "description": "Facoltativo. Questo testo viene mostrato quando l'utente passa sopra l'immagine con il suo puntatore"
               },
               {
                 "label": "Scala"
