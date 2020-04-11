@@ -57,10 +57,10 @@
           ]
         },
         {
-          "label": "Clipak",
-          "entity": "clip",
+          "label": "Klipak",
+          "entity": "klip",
           "field": {
-            "label": "Clip",
+            "label": "Klip",
             "fields": [
               {
                 "label": "Irudia"
