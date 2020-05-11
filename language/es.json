@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Aurrebista",
-      "description": "Irudiak arrastatuz mugitzen ahal dituzu. Posible duzu ere irudia hautatu eta + eta – teklen bidez zooma egiteko edo Z tekla sakatuta eragin saguaren gurpilari.",
+      "label": "Previsualización",
+      "description": "Usted puede mover (pan) las imágenes al arrastrarlas. También puede seleccionar una imagen y entonces usar kas teclas + o - en su teclado para acercarse o simplemente mantener oprimida la tecla Z mientras mueve su rueda del ratón.",
       "fields": [
         {
-          "label": "Geruza",
+          "label": "Diseño",
           "options": [
             {
               "label": "1"
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Bistaratzeko aukerak",
+          "label": "Opciones de visualización",
           "fields": [
             {
-              "label": "Altuera"
+              "label": "Altura"
             },
             {
-              "label": "Tartea"
+              "label": "Espaciado"
             },
             {
-              "label": "Markoa"
+              "label": "Marco"
             }
           ]
         },
         {
-          "label": "Klipak",
-          "entity": "klip",
+          "label": "Recortes",
+          "entity": "clip",
           "field": {
-            "label": "Klip",
+            "label": "Recorte",
             "fields": [
               {
-                "label": "Irudia"
+                "label": "Imagen"
               },
               {
-                "label": "Desplazamendua",
+                "label": "Sesgo",
                 "fields": [
                   {
-                    "label": "Goia"
+                    "label": "Superior"
                   },
                   {
-                    "label": "Ezkerra"
+                    "label": "Izquierda"
                   }
                 ]
               },
               {
-                "label": "Ordezko testua",
-                "description": "Beharrezkoa. Nabigatzaileak irudia ezin badu kargatu testu hau irudiaren ordez agertuko da. Irakurtzeko bozgorailuak ere erabiliko du."
+                "label": "Texto alternativo",
+                "description": "Requerido. Si el navegador no puede cargar la imagen este texto será mostrado en su lugar. También usado por Lectores de voz."
               },
               {
-                "label": "Desplazamendu testua",
-                "description": "Aukerakoa. Testu hau bistaratzen da erabiltzaileak punteroa irudiaren gainetik pasatzen duenean."
+                "label": "Texto al pasar ratón encima",
+                "description": "Opcional. Este texto es mostrado cuando el usurio pasa su puntero del ratón sobre la imagen."
               },
               {
-                "label": "Eskala"
+                "label": "Escala"
               }
             ]
           }

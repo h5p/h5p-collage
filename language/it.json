@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Aurrebista",
-      "description": "Irudiak arrastatuz mugitzen ahal dituzu. Posible duzu ere irudia hautatu eta + eta – teklen bidez zooma egiteko edo Z tekla sakatuta eragin saguaren gurpilari.",
+      "label": "Anteprima",
+      "description": "Puoi spostare le immagini intorno alla zona di trascinamento. Puoi anche selezionare un'immagine e poi usare i tasti + o - della tastiera per zoommare, o semplicemente tenere premuto il tasto Z mentre muovi la ruota del tuo mouse",
       "fields": [
         {
-          "label": "Geruza",
+          "label": "Layout",
           "options": [
             {
               "label": "1"
@@ -43,49 +43,49 @@
           ]
         },
         {
-          "label": "Bistaratzeko aukerak",
+          "label": "Mostra opzioni",
           "fields": [
             {
-              "label": "Altuera"
+              "label": "Altezza"
             },
             {
-              "label": "Tartea"
+              "label": "Spaziatura"
             },
             {
-              "label": "Markoa"
+              "label": "Frame"
             }
           ]
         },
         {
-          "label": "Klipak",
-          "entity": "klip",
+          "label": "Clip",
+          "entity": "clip",
           "field": {
-            "label": "Klip",
+            "label": "Clip",
             "fields": [
               {
-                "label": "Irudia"
+                "label": "Immagine"
               },
               {
-                "label": "Desplazamendua",
+                "label": "Offset",
                 "fields": [
                   {
-                    "label": "Goia"
+                    "label": "In alto"
                   },
                   {
-                    "label": "Ezkerra"
+                    "label": "Sinistra"
                   }
                 ]
               },
               {
-                "label": "Ordezko testua",
-                "description": "Beharrezkoa. Nabigatzaileak irudia ezin badu kargatu testu hau irudiaren ordez agertuko da. Irakurtzeko bozgorailuak ere erabiliko du."
+                "label": "Testo alternativo",
+                "description": "Obbligatorio. Se il browser non può caricare l'immagine sarà mostrato questo testo. Usato anche dai lettori vocali"
               },
               {
-                "label": "Desplazamendu testua",
-                "description": "Aukerakoa. Testu hau bistaratzen da erabiltzaileak punteroa irudiaren gainetik pasatzen duenean."
+                "label": "Testo in sovraimpressione",
+                "description": "Facoltativo. Questo testo viene mostrato quando l'utente passa sopra l'immagine con il suo puntatore"
               },
               {
-                "label": "Eskala"
+                "label": "Scala"
               }
             ]
           }
