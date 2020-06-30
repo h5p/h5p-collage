@@ -2,10 +2,10 @@
   "semantics": [
     {
       "label": "Pré-visualização",
-      "description": "Você pode mover (deslocar) as imagens arrastando-as. Você também pode selecionar uma imagem e então utilzar as teclas + ou - no seu teclado ou simplesmente pressionar a tecla Z enquanto move a roda do mouse para dar zoom.",
+      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilzar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "Estrutura",
           "options": [
             {
               "label": "1"
@@ -57,10 +57,10 @@
           ]
         },
         {
-          "label": "Clipes",
-          "entity": "clip",
+          "label": "Trechos",
+          "entity": "trecho",
           "field": {
-            "label": "Clipe",
+            "label": "Trecho",
             "fields": [
               {
                 "label": "Imagem"
@@ -78,11 +78,11 @@
               },
               {
                 "label": "Texto alternativo",
-                "description": "Obrigatório. Se o navegador não for capaz de exibir a imagem, este texto será exibido. Também utilizado por leitores de tela."
+                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, este texto será exibido. Também utilizado por leitores de ecrã."
               },
               {
                 "label": "Texto flutuante",
-                "description": "Opcional. Este texto será exibido se o usuário colocar o ponteiro sobre a imagem."
+                "description": "Opcional. Este texto será exibido se o utilizador colocar o ponteiro do rato sobre a imagem."
               },
               {
                 "label": "Escala"
