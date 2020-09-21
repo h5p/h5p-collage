@@ -58,7 +58,7 @@
         },
         {
           "label": "Recortes",
-          "entity": "clip",
+          "entity": "recorte",
           "field": {
             "label": "Recorte",
             "fields": [

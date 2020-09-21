@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Previsualización",
-      "description": "Usted puede mover (pan) las imágenes al arrastrarlas. También puede seleccionar una imagen y entonces usar kas teclas + o - en su teclado para acercarse o simplemente mantener oprimida la tecla Z mientras mueve su rueda del ratón.",
+      "label": "Pré-visualização",
+      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilzar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
       "fields": [
         {
-          "label": "Diseño",
+          "label": "Estrutura",
           "options": [
             {
               "label": "1"
@@ -43,46 +43,46 @@
           ]
         },
         {
-          "label": "Opciones de visualización",
+          "label": "Opções de exibição",
           "fields": [
             {
               "label": "Altura"
             },
             {
-              "label": "Espaciado"
+              "label": "Espaçamento"
             },
             {
-              "label": "Marco"
+              "label": "Quadro"
             }
           ]
         },
         {
-          "label": "Recortes",
-          "entity": "recorte",
+          "label": "Trechos",
+          "entity": "trecho",
           "field": {
-            "label": "Recorte",
+            "label": "Trecho",
             "fields": [
               {
-                "label": "Imagen"
+                "label": "Imagem"
               },
               {
-                "label": "Sesgo",
+                "label": "Posição",
                 "fields": [
                   {
-                    "label": "Superior"
+                    "label": "Topo"
                   },
                   {
-                    "label": "Izquierda"
+                    "label": "Esquerda"
                   }
                 ]
               },
               {
                 "label": "Texto alternativo",
-                "description": "Requerido. Si el navegador no puede cargar la imagen este texto será mostrado en su lugar. También usado por Lectores de voz."
+                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, este texto será exibido. Também utilizado por leitores de ecrã."
               },
               {
-                "label": "Texto al pasar ratón encima",
-                "description": "Opcional. Este texto es mostrado cuando el usurio pasa su puntero del ratón sobre la imagen."
+                "label": "Texto flutuante",
+                "description": "Opcional. Este texto será exibido se o utilizador colocar o ponteiro do rato sobre a imagem."
               },
               {
                 "label": "Escala"
