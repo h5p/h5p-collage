@@ -2,7 +2,7 @@
   "semantics": [
     {
       "label": "Predogled",
-      "description": "Prizor na izbrani sliki se lahko dodatno določi s potegom miške (povleci & spusti). Spremembo povečave se določi z izbiro slike in tipkama + ter -, ali držanjem tipke Z ter vrtenjem kolesca na miški.",
+      "description": "Prizor na izbrani sliki se lahko dodatno določi s potegom miške (povleci &amp; spusti). Spremembo povečave se določi z izbiro slike in tipkama + ter -, ali držanjem tipke Z ter vrtenjem kolesca na miški.",
       "fields": [
         {
           "label": "Postavitev",
