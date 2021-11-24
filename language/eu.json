@@ -2,10 +2,10 @@
   "semantics": [
     {
       "label": "Aurrebista",
-      "description": "Irudiak arrastatuz mugitzen ahal dituzu. Posible duzu ere irudia hautatu eta + eta – teklen bidez zooma egiteko edo Z tekla sakatuta eragin saguaren gurpilari.",
+      "description": "Irudiak arrastatuz mugitzen ahal dituzu. Posible duzu ere irudia hautatu eta + eta – teklen bidez zooma egiteko edo Z tekla sakatuta eragin saguaren gurpilari handitzeko edo txikitzeko.",
       "fields": [
         {
-          "label": "Geruza",
+          "label": "Diseinua",
           "options": [
             {
               "label": "1"
