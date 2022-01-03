@@ -2,7 +2,7 @@
   "semantics": [
     {
       "label": "Pré-visualização",
-      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilzar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
+      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilizar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
       "fields": [
         {
           "label": "Estrutura",
@@ -78,11 +78,11 @@
               },
               {
                 "label": "Texto alternativo",
-                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, este texto será exibido. Também utilizado por leitores de ecrã."
+                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, será exibido este texto. Também utilizado por leitores de ecrã."
               },
               {
-                "label": "Texto flutuante",
-                "description": "Opcional. Este texto será exibido se o utilizador colocar o ponteiro do rato sobre a imagem."
+                "label": "Texto ao passar o rato",
+                "description": "Opcional. Este texto será exibido se o utilizador passar o ponteiro do rato sobre a imagem."
               },
               {
                 "label": "Escala"
