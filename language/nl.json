@@ -1,11 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Voorvertoning",
-      "description": "Je kunt de afbeeldingen verplaatsen door ze te verschuiven. Je kunt ook een afbeelding selecteren en dan op de + of - knop te drukken om te zoomen of houd de Z-knop ingedrukt terwijl je je muiswiel draait.",
+      "label": "Voorbeeld",
+      "description": "Je kunt de afbeeldingen verplaatsen door ze te verslepen. Je kunt ook een afbeelding selecteren en dan op de + of - knop drukken om te zoomen of houd de Z-knop ingedrukt terwijl je je muiswiel draait.",
       "fields": [
         {
-          "label": "Layout",
+          "label": "Lay-out",
           "options": [
             {
               "label": "1"
@@ -58,7 +58,7 @@
         },
         {
           "label": "Fragmenten",
-          "entity": "Fragment",
+          "entity": "fragment",
           "field": {
             "label": "Fragment",
             "fields": [
@@ -78,7 +78,7 @@
               },
               {
                 "label": "Alternatieve tekst",
-                "description": "Verplicht. Als de browser de afbeelding niet kan tonen zal deze tekst getoond worden. Ook gebruikt door readspeakers."
+                "description": "Verplicht. Als de browser de afbeelding niet kan tonen zal deze tekst getoond worden. Ook gebruikt door schermlezers."
               },
               {
                 "label": "Hover tekst",

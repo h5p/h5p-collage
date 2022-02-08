@@ -1,11 +1,9 @@
 {
   "semantics": [
     {
-      "label": "Pré-visualização",
-      "description": "Pode mover (deslocar) as imagens arrastando-as. Também pode selecionar uma imagem e utilizar as teclas + ou - do seu teclado ou simplesmente manter pressionada a tecla Z enquanto gira a roda do rato para mais ou menos zoom.",
       "fields": [
         {
-          "label": "Estrutura",
+          "label": "Izkārtojums",
           "options": [
             {
               "label": "1"
@@ -43,54 +41,56 @@
           ]
         },
         {
-          "label": "Opções de exibição",
+          "label": "Atspoguļojuma opcijas",
           "fields": [
             {
-              "label": "Altura"
+              "label": "Augstums"
             },
             {
-              "label": "Espaçamento"
+              "label": "Atstarpes"
             },
             {
-              "label": "Quadro"
+              "label": "Rāmis"
             }
           ]
         },
         {
-          "label": "Trechos",
-          "entity": "trecho",
+          "label": "Klipi",
+          "entity": "klips",
           "field": {
-            "label": "Trecho",
+            "label": "Klips",
             "fields": [
               {
-                "label": "Imagem"
+                "label": "Attēls"
               },
               {
-                "label": "Posição",
+                "label": "Ofsets",
                 "fields": [
                   {
-                    "label": "Topo"
+                    "label": "Augša"
                   },
                   {
-                    "label": "Esquerda"
+                    "label": "Kreisā mala"
                   }
                 ]
               },
               {
-                "label": "Texto alternativo",
-                "description": "Obrigatório. Se o navegador não for capaz de mostrar a imagem, será exibido este texto. Também utilizado por leitores de ecrã."
+                "label": "Alternatīvais teksts",
+                "description": "Obligāti. Ja pārlūkprogramma nevar ielādēt attēlu, tā vietā tiks parādīts šis teksts. Izmanto arī asistīvās tehnoloģijas."
               },
               {
-                "label": "Texto ao passar o rato",
-                "description": "Opcional. Este texto será exibido se o utilizador passar o ponteiro do rato sobre a imagem."
+                "label": "Kursora novietošanas teksts",
+                "description": "Neobligāts. Šis teksts tiks atspoguļots, kad lietotājs virs attēla novietos peles kursoru."
               },
               {
-                "label": "Escala"
+                "label": "Mērogs"
               }
             ]
           }
         }
-      ]
+      ],
+      "label": "Priekšskatījums",
+      "description": "Variet pārvietot (panoramēt) attēlus, velkot tos. Variet arī atlasīt attēlu un pēc tam izmantot tastatūras taustiņus + vai -, lai tuvinātu, vai vienkārši turēt nospiestu taustiņu Z, pārvietojot peles ritenīti."
     }
   ]
 }
