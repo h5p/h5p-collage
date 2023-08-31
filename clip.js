@@ -61,6 +61,10 @@
       // Pan image
       $img.css('margin', content.offset.top + '% 0 0 ' + content.offset.left + '%');
     };
+    /**
+     * Decode html
+     */ 
+    self.decodeHTML = value => ($('<textarea/>').html(value).text());
 
     /**
      * Triggers the loading of the image.
@@ -77,7 +81,7 @@
       // Create image
       $img = $('<img/>', {
         'class': 'h5p-collage-image',
-        alt: content.alt,
+        alt: self.decodeHTML(content.alt),
         title: content.title,
         src: H5P.getPath(content.image.path, contentId),
         prependTo: self.$wrapper,
