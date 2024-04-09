@@ -82,7 +82,7 @@
       $img = $('<img/>', {
         'class': 'h5p-collage-image',
         alt: self.decodeHTML(content.alt),
-        title: content.title,
+        title: self.decodeHTML(content.title),
         src: H5P.getPath(content.image.path, contentId),
         prependTo: self.$wrapper,
         on: {
