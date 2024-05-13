@@ -71,6 +71,12 @@ H5P.Collage = (function ($, EventDispatcher) {
 
       // Render template
       self.setLayout(content.template);
+
+      let observer = new IntersectionObserver(() => {
+        self.trigger('resize');
+        observer.disconnect();
+      });
+      observer.observe($wrapper.get(0));
     };
 
     /**
@@ -158,8 +164,6 @@ H5P.Collage = (function ($, EventDispatcher) {
         return;
       }
 
-      clearInterval(timer);
-
       // Get outer width without rounding
       var width = $wrapper[0].getBoundingClientRect().width;
       $wrapper.css({
@@ -174,11 +178,6 @@ H5P.Collage = (function ($, EventDispatcher) {
         }
       }
     });
-
-    let timer = setInterval(() => self.trigger('resize'), 100);
-
-    // Ensure we don't trigger resize indefinitely
-    setTimeout(() => clearInterval(timer), 1000);
   }
 
   // Extends the event dispatcher
