@@ -89,6 +89,7 @@
           load: function () {
             // Make sure it's in the correct position
             self.positionImage();
+            self.trigger('loaded');
           }
         }
       });
