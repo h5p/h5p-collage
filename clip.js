@@ -99,6 +99,9 @@
         on: {
           load: function () {
             // Make sure it's in the correct position
+            $(this).get(0).style.removeProperty('width');
+            $(this).get(0).style.removeProperty('height');
+            isPositioned = false;
             self.positionImage();
             self.trigger('loaded');
           }
