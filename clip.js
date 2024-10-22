@@ -72,6 +72,17 @@
     self.load = function () {
       if (self.empty()) {
         self.$wrapper.addClass('h5p-collage-empty');
+
+        // Workaround to trigger an event when the image set as background
+        // via CSS finishes loading
+        const img = new Image();
+        // We need a reference to the Collage instance to be able to
+        // instead call self.getLibraryFilePath('h5p.svg'). This is likely
+        // good enough.
+        img.src = H5P.getLibraryPath('H5P.Collage-0.3') + '/h5p.svg';
+        img.onload = () => {
+          self.trigger('loaded');
+        }
         return; // No image set
       }
       else {
@@ -89,6 +100,7 @@
           load: function () {
             // Make sure it's in the correct position
             self.positionImage();
+            self.trigger('loaded');
           }
         }
       });
