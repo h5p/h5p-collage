@@ -1,5 +1,6 @@
 .h5p-collage-wrapper {
   border: 0 solid transparent;
+  background-color: var(--h5p-theme-ui-base);
 }
 .h5p-collage-template {
   width: 100%;
