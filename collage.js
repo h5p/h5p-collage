@@ -71,6 +71,12 @@ H5P.Collage = (function ($, EventDispatcher) {
 
       // Render template
       self.setLayout(content.template);
+
+      let observer = new IntersectionObserver(() => {
+        self.trigger('resize');
+        observer.disconnect();
+      });
+      observer.observe($wrapper.get(0));
     };
 
     /**
