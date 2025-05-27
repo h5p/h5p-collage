@@ -27,6 +27,13 @@
       "path": "collage.css"
     }
   ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Components",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
   "editorDependencies": [
     {
       "machineName": "H5PEditor.Collage",

@@ -70,12 +70,10 @@
      * Triggers the loading of the image.
      */
     self.load = function () {
+      // No image set, use placeholder
       if (self.empty()) {
-        self.$wrapper.addClass('h5p-collage-empty');
-        return; // No image set
-      }
-      else {
-        self.$wrapper.removeClass('h5p-collage-empty');
+        self.$wrapper[0].appendChild(H5P.Components.PlaceholderImg());
+        return;
       }
 
       // Create image
