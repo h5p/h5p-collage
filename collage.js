@@ -89,7 +89,7 @@ H5P.Collage = (function ($, EventDispatcher) {
       }
 
       // Add to DOM
-      $container.addClass('h5p-collage').html('').append($wrapper);
+      $container.addClass('h5p-collage h5p-theme').html('').append($wrapper);
     };
 
     /**

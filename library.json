@@ -5,7 +5,7 @@
   "author": "Joubel",
   "majorVersion": 0,
   "minorVersion": 3,
-  "patchVersion": 20,
+  "patchVersion": 25,
   "runnable": 1,
   "coreApi": {
     "majorVersion": 1,
@@ -25,6 +25,13 @@
   "preloadedCss": [
     {
       "path": "collage.css"
+    }
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "H5P.Components",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ],
   "editorDependencies": [
