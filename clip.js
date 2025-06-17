@@ -8,8 +8,9 @@
    * @param {H5P.jQuery} $container
    * @param {Object} content
    * @param {number} contentId
+   * @param {H5P.Collage} parent
    */
-  Collage.Clip = function ($container, content, contentId) {
+  Collage.Clip = function ($container, content, contentId, parent) {
     var self = this;
 
     // Initialize event inheritance
@@ -26,6 +27,9 @@
 
     // Always available
     self.content = content;
+
+    // Instance of H5P.Collage
+    self.parent = parent;
 
     // Keep track of image has been positioned
     let isPositioned = false;
@@ -63,7 +67,7 @@
     };
     /**
      * Decode html
-     */ 
+     */
     self.decodeHTML = value => ($('<textarea/>').html(value).text());
 
     /**
@@ -75,13 +79,15 @@
 
         // Workaround to trigger an event when the image set as background
         // via CSS finishes loading
-        const img = new Image();
-        // We need a reference to the Collage instance to be able to
-        // instead call self.getLibraryFilePath('h5p.svg'). This is likely
-        // good enough.
-        img.src = H5P.getLibraryPath('H5P.Collage-0.3') + '/h5p.svg';
-        img.onload = () => {
-          self.trigger('loaded');
+        if (
+          typeof self.parent?.getLibraryFilePath === 'function' &&
+          self.parent?.libraryInfo
+        ) {
+          const img = new Image();
+          img.src = self.parent.getLibraryFilePath('h5p.svg')
+          img.onload = () => {
+            self.trigger('loaded');
+          };
         }
         return; // No image set
       }

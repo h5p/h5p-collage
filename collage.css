@@ -23,7 +23,7 @@
 .h5p-collage-empty:before {
   position: absolute;
   content: "";
-  background: #f6f6f6 url('h5p.svg') no-repeat center;
+  background: #f6f6f6 url('h5p.svg') no-repeat center; /* NB! workaround for loaded event in clip.js */
   background-size: 50% 50%;
   width: 100%;
   height: 100%;
