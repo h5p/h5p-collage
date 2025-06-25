@@ -43,7 +43,7 @@ H5P.Collage = (function ($, EventDispatcher) {
       }
 
       // Add new clip
-      var clip = new Collage.Clip($col, content.clips[clipIndex], contentId);
+      var clip = new Collage.Clip($col, content.clips[clipIndex], contentId, self);
       self.clips.push(clip);
 
       self.trigger('clipAdded', clip);
