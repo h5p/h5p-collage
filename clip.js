@@ -108,7 +108,10 @@
             $(this).get(0).style.removeProperty('width');
             $(this).get(0).style.removeProperty('height');
             isPositioned = false;
-            self.positionImage();
+            requestAnimationFrame(() => {
+              self.positionImage();
+            });
+
             self.trigger('loaded');
           }
         }
