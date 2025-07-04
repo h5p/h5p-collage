@@ -83,7 +83,7 @@ H5P.Collage = (function ($, EventDispatcher) {
       if ($wrapper === undefined) {
         createHtml();
         var $parent = $container.parent();
-        if (!$parent.hasClass('h5p-frame')) {
+        if (!$parent.hasClass('h5p-frame') && !$parent.hasClass('h5p-column-box-container')) {
           $parent.css('backgroundColor', 'transparent');
         }
       }
