@@ -70,10 +70,15 @@
      * Triggers the loading of the image.
      */
     self.load = function () {
-      // No image set, use placeholder
-      if (self.empty()) {
+      // No image set, use placeholder only if H5PEditor is not defined. Else use empty class.
+      if (self.empty() && typeof H5PEditor === 'undefined') {
         self.$wrapper[0].appendChild(H5P.Components.PlaceholderImg());
         return;
+      } else if (self.empty()) {
+        self.$wrapper.addClass('h5p-collage-empty');
+        return;
+      } else {
+        self.$wrapper.removeClass('h5p-collage-empty');
       }
 
       // Create image
