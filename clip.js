@@ -77,6 +77,8 @@
       } else if (self.empty()) {
         self.$wrapper.addClass('h5p-collage-empty');
         return;
+      } else {
+        self.$wrapper.removeClass('h5p-collage-empty');
       }
 
       // Create image
