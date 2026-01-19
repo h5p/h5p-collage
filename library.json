@@ -9,7 +9,7 @@
   "runnable": 1,
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 7
+    "minorVersion": 28
   },
   "preloadedJs": [
     {
